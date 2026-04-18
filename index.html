@@ -1,0 +1,1529 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- ═══════════════════════════════════════════════════════════
+       SEO: PAGE TITLE & META
+  ═══════════════════════════════════════════════════════════ -->
+  <title>MK Pub Entertainment | Pub Quiz, Karaoke &amp; Disco Bingo</title>
+  <meta name="description" content="MK Pub Entertainment brings the party to your venue with professional Pub Quizzes, Karaoke and Disco Bingo nights across the UK. Book us for your next event.">
+
+  <!-- Canonical — TODO: update to live domain when deployed -->
+  <link rel="canonical" href="https://www.mkpubentertainment.co.uk/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="MK Pub Entertainment | Pub Quiz, Karaoke &amp; Disco Bingo">
+  <meta property="og:description" content="MK Pub Entertainment brings the party to your venue with professional Pub Quizzes, Karaoke and Disco Bingo nights across the UK.">
+  <meta property="og:image" content="https://www.mkpubentertainment.co.uk/images/og-image.jpg">
+  <meta property="og:url" content="https://www.mkpubentertainment.co.uk/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_GB">
+  <meta property="og:site_name" content="MK Pub Entertainment">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="MK Pub Entertainment | Pub Quiz, Karaoke &amp; Disco Bingo">
+  <meta name="twitter:description" content="MK Pub Entertainment brings the party to your venue with professional Pub Quizzes, Karaoke and Disco Bingo nights across the UK.">
+  <meta name="twitter:image" content="https://www.mkpubentertainment.co.uk/images/og-image.jpg">
+
+  <!-- TODO: Add real favicon files and update these links -->
+  <!-- <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"> -->
+  <!-- <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"> -->
+  <!-- <link rel="apple-touch-icon" href="/apple-touch-icon.png"> -->
+
+  <!-- ═══════════════════════════════════════════════════════════
+       SEO: STRUCTURED DATA
+       TODO: Fill in streetAddress, addressLocality, postalCode,
+       addressRegion, geo coordinates, and sameAs social URLs
+  ═══════════════════════════════════════════════════════════ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EntertainmentBusiness",
+    "name": "MK Pub Entertainment",
+    "description": "Professional Pub Quiz, Karaoke, and Disco Bingo entertainment for pubs and venues across the UK.",
+    "url": "https://www.mkpubentertainment.co.uk",
+    "telephone": "+447700000000",
+    "email": "placeholder@mkpubentertainment.co.uk",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "GB"
+    },
+    "areaServed": {
+      "@type": "Country",
+      "name": "United Kingdom"
+    },
+    "priceRange": "\u00a3\u00a3",
+    "image": "https://www.mkpubentertainment.co.uk/images/og-image.jpg",
+    "sameAs": []
+  }
+  </script>
+
+  <script type="application/ld+json">
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "Pub Quiz Hosting",
+      "provider": { "@type": "EntertainmentBusiness", "name": "MK Pub Entertainment" },
+      "description": "Professional hosted pub quiz nights for venues across the UK. Bespoke rounds, full hosting, and sound system included."
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "Karaoke Nights",
+      "provider": { "@type": "EntertainmentBusiness", "name": "MK Pub Entertainment" },
+      "description": "Live karaoke entertainment with full sound system, professional hosting, and thousands of songs to choose from."
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "Disco Bingo",
+      "provider": { "@type": "EntertainmentBusiness", "name": "MK Pub Entertainment" },
+      "description": "The ultimate Disco Bingo experience blending chart-topping hits with classic bingo — a night your crowd will never forget."
+    }
+  ]
+  </script>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       FONTS — display=swap handles font-display: swap via Google
+  ═══════════════════════════════════════════════════════════ -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap');
+  </style>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       STYLES
+  ═══════════════════════════════════════════════════════════ -->
+  <style>
+    /* ── CUSTOM PROPERTIES ───────────────────────────────────── */
+    :root {
+      --purple:      #1a0533;
+      --magenta:     #e91e8c;
+      --magenta-dim: #c71677;
+      --gold:        #f5a623;
+      --gold-dim:    #d4891a;
+      --dark:        #0d0d0d;
+      --card:        #110722;
+      --card-2:      #0d0519;
+      --off-white:   #f0f0f0;
+      --text-muted:  rgba(240,240,240,0.6);
+      --glow-m:      rgba(233,30,140,0.35);
+      --glow-g:      rgba(245,166,35,0.35);
+      --nav-h:       68px;
+    }
+
+    /* ── RESET ───────────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--dark);
+      color: var(--off-white);
+      overflow-x: hidden;
+      line-height: 1.65;
+    }
+
+    img { display: block; max-width: 100%; height: auto; }
+
+    /* ── SKIP LINK ───────────────────────────────────────────── */
+    .skip-link {
+      position: absolute;
+      top: -120%;
+      left: 1rem;
+      padding: 0.5rem 1.25rem;
+      background: var(--magenta);
+      color: #fff;
+      font-weight: 600;
+      font-size: 0.9rem;
+      border-radius: 0 0 6px 6px;
+      z-index: 9999;
+      transition: top 0.2s;
+      text-decoration: none;
+    }
+    .skip-link:focus { top: 0; }
+
+    /* ── NAVIGATION ──────────────────────────────────────────── */
+    .nav {
+      position: fixed;
+      inset: 0 0 auto 0;
+      height: var(--nav-h);
+      z-index: 900;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 2.5rem;
+      background: rgba(10, 0, 22, 0.92);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(233,30,140,0.18);
+      transition: background 0.3s;
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      flex-shrink: 0;
+    }
+    .nav-logo svg { width: 100%; height: 100%; display: block; }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 2.5rem;
+      list-style: none;
+    }
+    .nav-links a {
+      color: rgba(240,240,240,0.85);
+      text-decoration: none;
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      transition: color 0.2s;
+      position: relative;
+    }
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -4px; left: 0;
+      width: 0; height: 2px;
+      background: var(--magenta);
+      transition: width 0.25s;
+      border-radius: 2px;
+    }
+    .nav-links a:hover { color: #fff; }
+    .nav-links a:hover::after { width: 100%; }
+
+    .nav-links .cta {
+      background: var(--magenta);
+      color: #fff !important;
+      padding: 0.5rem 1.4rem;
+      border-radius: 4px;
+      transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 3px 16px var(--glow-m);
+    }
+    .nav-links .cta::after { display: none; }
+    .nav-links .cta:hover {
+      background: var(--magenta-dim);
+      transform: translateY(-1px);
+      box-shadow: 0 5px 22px var(--glow-m);
+    }
+
+    /* Hamburger */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 6px;
+      z-index: 1000;
+    }
+    .hamburger span {
+      display: block;
+      width: 24px; height: 2px;
+      background: var(--off-white);
+      border-radius: 2px;
+      transition: transform 0.3s, opacity 0.3s;
+    }
+    .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    /* ── HERO ────────────────────────────────────────────────── */
+    .hero {
+      position: relative;
+      height: 100dvh;
+      min-height: 620px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      overflow: hidden;
+      padding: 0 1.5rem;
+      background: radial-gradient(ellipse 80% 70% at 50% 40%, #2e0858 0%, #1a0533 45%, #0a000f 100%);
+    }
+
+    /* subtle noise overlay */
+    .hero::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23noise)' opacity='0.035'/%3E%3C/svg%3E");
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    #particle-canvas {
+      position: absolute;
+      inset: 0;
+      width: 100%; height: 100%;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
+    }
+
+    .hero-logo {
+      width: clamp(260px, 45vw, 420px);
+      aspect-ratio: 87 / 20;
+      filter: invert(1);
+    }
+    .hero-logo svg { width: 100%; height: 100%; display: block; }
+
+    .hero h1 {
+      font-family: 'Bebas Neue', cursive;
+      font-size: clamp(3.5rem, 10vw, 7rem);
+      letter-spacing: 0.06em;
+      color: var(--off-white);
+      line-height: 1;
+      text-shadow: 0 0 50px rgba(233,30,140,0.5), 0 2px 4px rgba(0,0,0,0.6);
+    }
+
+    .hero-sub {
+      font-size: clamp(0.95rem, 2.2vw, 1.2rem);
+      color: rgba(240,240,240,0.65);
+      max-width: 520px;
+      margin-top: -0.4rem;
+    }
+
+    .hero-ctas {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 0.5rem;
+    }
+
+    /* ── BUTTONS ─────────────────────────────────────────────── */
+    .btn-primary {
+      display: inline-block;
+      padding: 0.9rem 2.5rem;
+      background: var(--magenta);
+      color: #fff;
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 700;
+      font-size: 0.9rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      text-decoration: none;
+      border-radius: 4px;
+      border: none;
+      cursor: pointer;
+      box-shadow: 0 4px 22px var(--glow-m);
+      transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+    }
+    .btn-primary:hover {
+      background: var(--magenta-dim);
+      transform: translateY(-2px) scale(1.03);
+      box-shadow: 0 8px 32px rgba(233,30,140,0.55);
+    }
+
+    .btn-outline {
+      display: inline-block;
+      padding: 0.9rem 2.5rem;
+      background: transparent;
+      color: var(--gold);
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 700;
+      font-size: 0.9rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      text-decoration: none;
+      border-radius: 4px;
+      border: 2px solid var(--gold);
+      box-shadow: 0 4px 22px var(--glow-g);
+      transition: background 0.2s, color 0.2s, transform 0.2s, box-shadow 0.2s;
+    }
+    .btn-outline:hover {
+      background: var(--gold);
+      color: var(--dark);
+      transform: translateY(-2px) scale(1.03);
+      box-shadow: 0 8px 32px rgba(245,166,35,0.5);
+    }
+
+    /* Hero scroll nudge */
+    .hero-scroll {
+      position: absolute;
+      bottom: 2rem;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+      color: rgba(240,240,240,0.35);
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+    }
+    .hero-scroll-line {
+      width: 1px;
+      height: 42px;
+      background: linear-gradient(to bottom, rgba(233,30,140,0.6), transparent);
+      animation: scrollpulse 2.2s ease-in-out infinite;
+    }
+    @keyframes scrollpulse {
+      0%, 100% { opacity: 0.35; transform: scaleY(1); }
+      50%       { opacity: 0.9;  transform: scaleY(1.15); }
+    }
+
+    /* ── SECTION COMMONS ─────────────────────────────────────── */
+    section { padding: 6rem 2rem; }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--magenta);
+      margin-bottom: 0.8rem;
+    }
+
+    .section-title {
+      font-family: 'Bebas Neue', cursive;
+      font-size: clamp(2.6rem, 6vw, 5rem);
+      letter-spacing: 0.05em;
+      line-height: 1;
+      color: var(--off-white);
+      margin-bottom: 1.25rem;
+    }
+    .section-title .m  { color: var(--magenta); }
+    .section-title .g  { color: var(--gold); }
+
+    .section-center { text-align: center; }
+
+    /* horizontal neon rule */
+    .neon-rule {
+      width: 60px; height: 3px;
+      background: linear-gradient(to right, var(--magenta), var(--gold));
+      border-radius: 2px;
+      margin: 0 auto 0;
+    }
+    .neon-rule.left { margin-left: 0; }
+
+    /* ── WHAT WE DO ──────────────────────────────────────────── */
+    .services { background: #0a000f; }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin-top: 3.5rem;
+    }
+
+    .service-card {
+      background: var(--card);
+      border-radius: 10px;
+      padding: 2.75rem 2.25rem;
+      position: relative;
+      overflow: hidden;
+      border-top: 3px solid var(--magenta);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .service-card.gold-border { border-top-color: var(--gold); }
+
+    .service-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 100% 60% at 50% 0%, rgba(233,30,140,0.08) 0%, transparent 70%);
+      opacity: 0;
+      transition: opacity 0.35s;
+      pointer-events: none;
+    }
+    .service-card.gold-border::before {
+      background: radial-gradient(ellipse 100% 60% at 50% 0%, rgba(245,166,35,0.1) 0%, transparent 70%);
+    }
+    .service-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 24px 60px rgba(233,30,140,0.22);
+    }
+    .service-card.gold-border:hover {
+      box-shadow: 0 24px 60px rgba(245,166,35,0.2);
+    }
+    .service-card:hover::before { opacity: 1; }
+
+    .service-icon {
+      font-size: 3.25rem;
+      margin-bottom: 1.5rem;
+      display: block;
+      line-height: 1;
+    }
+
+    .service-card h3 {
+      font-family: 'Bebas Neue', cursive;
+      font-size: 2rem;
+      letter-spacing: 0.06em;
+      color: var(--off-white);
+      margin-bottom: 0.85rem;
+    }
+
+    .service-card p {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      line-height: 1.75;
+    }
+
+    /* ── VIDEO SHOWCASE ──────────────────────────────────────── */
+    .videos {
+      background: var(--purple);
+      position: relative;
+      overflow: hidden;
+    }
+    .videos::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 10%; right: 10%;
+      height: 1px;
+      background: linear-gradient(to right, transparent, rgba(233,30,140,0.6), transparent);
+    }
+    .videos::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 10%; right: 10%;
+      height: 1px;
+      background: linear-gradient(to right, transparent, rgba(245,166,35,0.4), transparent);
+    }
+
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin-top: 3.5rem;
+    }
+
+    .video-item { display: flex; flex-direction: column; gap: 0.85rem; }
+
+    /* 16:9 ratio via padding-bottom trick */
+    .video-wrapper {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      border-radius: 8px;
+      border: 1px solid rgba(233,30,140,0.25);
+      background: #1a0533;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.5);
+      transition: box-shadow 0.3s, border-color 0.3s;
+    }
+    .video-wrapper:hover {
+      border-color: rgba(233,30,140,0.55);
+      box-shadow: 0 12px 44px var(--glow-m);
+    }
+    .video-wrapper iframe {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      border: none;
+    }
+
+    .video-caption {
+      text-align: center;
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    /* ── GALLERY ─────────────────────────────────────────────── */
+    .gallery { background: var(--dark); overflow: hidden; padding-bottom: 5rem; }
+
+    .gallery-track-wrap {
+      position: relative;
+      overflow: hidden;
+      margin-top: 3rem;
+    }
+    /* fade edges */
+    .gallery-track-wrap::before,
+    .gallery-track-wrap::after {
+      content: '';
+      position: absolute;
+      top: 0; bottom: 0;
+      width: 100px;
+      z-index: 2;
+      pointer-events: none;
+    }
+    .gallery-track-wrap::before { left: 0;  background: linear-gradient(to right, var(--dark), transparent); }
+    .gallery-track-wrap::after  { right: 0; background: linear-gradient(to left,  var(--dark), transparent); }
+
+    .gallery-track {
+      display: flex;
+      gap: 1.25rem;
+      width: max-content;
+      animation: marquee 34s linear infinite;
+    }
+    .gallery-track:hover { animation-play-state: paused; }
+
+    @keyframes marquee {
+      from { transform: translateX(0); }
+      to   { transform: translateX(-50%); }
+    }
+
+    .gallery-item {
+      flex: 0 0 310px;
+      height: 210px;
+      border-radius: 10px;
+      position: relative;
+      overflow: hidden;
+      cursor: default;
+    }
+
+    /*
+      TODO: Replace these gradient placeholders with real images:
+        <img src="/images/gallery/quiz-night-the-crown.webp"
+             alt="Pub quiz night at The Crown"
+             width="310" height="210" loading="lazy">
+      Use WebP at 310×210px, under 80KB each.
+      Duplicate the set below for the seamless loop.
+    */
+    .gi-1 { background: linear-gradient(145deg, #3b1260 0%, #e91e8c 100%); }
+    .gi-2 { background: linear-gradient(145deg, #0a2a5e 0%, #f5a623 100%); }
+    .gi-3 { background: linear-gradient(145deg, #5e1240 0%, #e91e8c 100%); }
+    .gi-4 { background: linear-gradient(145deg, #1a4a30 0%, #f5a623 100%); }
+    .gi-5 { background: linear-gradient(145deg, #3a0a5e 0%, #b5179e 100%); }
+    .gi-6 { background: linear-gradient(145deg, #5e2a0a 0%, #f5a623 100%); }
+
+    .gallery-caption {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.85) 0%, transparent 100%);
+      padding: 1.5rem 1rem 0.85rem;
+      font-size: 0.83rem;
+      font-weight: 600;
+      color: #fff;
+      letter-spacing: 0.03em;
+    }
+
+    /* ── TESTIMONIALS ────────────────────────────────────────── */
+    .testimonials {
+      background: #070012;
+      position: relative;
+      overflow: hidden;
+    }
+    .testimonials::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 10%; right: 10%;
+      height: 1px;
+      background: linear-gradient(to right, transparent, rgba(245,166,35,0.5), transparent);
+    }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin-top: 3.5rem;
+    }
+
+    .tcard {
+      background: var(--card-2);
+      border-radius: 10px;
+      padding: 2.25rem 1.75rem 2rem;
+      border-left: 4px solid var(--gold);
+      position: relative;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .tcard:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 50px rgba(245,166,35,0.14);
+    }
+
+    .tcard-mark {
+      font-family: 'Bebas Neue', cursive;
+      font-size: 6rem;
+      line-height: 0.75;
+      color: var(--gold);
+      opacity: 0.18;
+      position: absolute;
+      top: 1.5rem; left: 1.5rem;
+      pointer-events: none;
+      user-select: none;
+    }
+
+    .tcard-body {
+      font-size: 0.95rem;
+      color: rgba(240,240,240,0.78);
+      line-height: 1.8;
+      font-style: italic;
+      padding-top: 2.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .tcard-author {
+      font-weight: 700;
+      font-size: 0.9rem;
+      color: var(--gold);
+    }
+    .tcard-venue {
+      font-size: 0.8rem;
+      color: rgba(240,240,240,0.35);
+      margin-top: 0.2rem;
+    }
+
+    /* ── BOOKING ─────────────────────────────────────────────── */
+    .booking {
+      background: var(--purple);
+      position: relative;
+      overflow: hidden;
+    }
+    .booking::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 10%; right: 10%;
+      height: 1px;
+      background: linear-gradient(to right, transparent, rgba(233,30,140,0.55), transparent);
+    }
+
+    .booking-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.1fr;
+      gap: 5rem;
+      align-items: start;
+    }
+
+    .booking-info .section-title { margin-bottom: 0.75rem; }
+    .booking-info p {
+      color: var(--text-muted);
+      font-size: 0.97rem;
+      line-height: 1.8;
+      margin-bottom: 2.25rem;
+    }
+
+    .contact-row {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.1rem;
+    }
+    .contact-icon {
+      width: 44px; height: 44px;
+      background: rgba(233,30,140,0.12);
+      border: 1px solid rgba(233,30,140,0.22);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+    .contact-row a {
+      color: var(--off-white);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.95rem;
+      transition: color 0.2s;
+    }
+    .contact-row a:hover { color: var(--magenta); }
+
+    /* Form */
+    .booking-form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.1rem;
+      background: rgba(0,0,0,0.25);
+      border: 1px solid rgba(233,30,140,0.15);
+      border-radius: 12px;
+      padding: 2.5rem 2rem;
+    }
+
+    .form-row-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    .fg { display: flex; flex-direction: column; gap: 0.45rem; }
+
+    .fg label {
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      color: rgba(240,240,240,0.55);
+    }
+
+    .fg input,
+    .fg select,
+    .fg textarea {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 6px;
+      padding: 0.78rem 1rem;
+      color: var(--off-white);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.95rem;
+      outline: none;
+      width: 100%;
+      transition: border-color 0.2s, background 0.2s, box-shadow 0.2s;
+    }
+    .fg input::placeholder,
+    .fg textarea::placeholder { color: rgba(240,240,240,0.28); }
+
+    .fg input:focus,
+    .fg select:focus,
+    .fg textarea:focus {
+      border-color: var(--magenta);
+      background: rgba(233,30,140,0.07);
+      box-shadow: 0 0 0 3px rgba(233,30,140,0.12);
+    }
+
+    .fg select {
+      appearance: none;
+      cursor: pointer;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='7' viewBox='0 0 12 7'%3E%3Cpath fill='%23f0f0f0' fill-opacity='0.45' d='M6 7L0 0h12z'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 1rem center;
+      padding-right: 2.5rem;
+    }
+    .fg select option { background: #1a0533; color: var(--off-white); }
+
+    .fg textarea { resize: vertical; min-height: 120px; }
+
+    .btn-submit {
+      padding: 0.95rem 2rem;
+      margin-top: 0.25rem;
+    }
+
+    .form-note {
+      font-size: 0.76rem;
+      color: rgba(240,240,240,0.28);
+      text-align: center;
+    }
+
+    /* ── FOOTER ──────────────────────────────────────────────── */
+    footer {
+      background: #060010;
+      padding: 4.5rem 2rem 2.25rem;
+      border-top: 1px solid rgba(233,30,140,0.12);
+    }
+
+    .footer-inner { max-width: 1200px; margin: 0 auto; }
+
+    .footer-top {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr;
+      gap: 3rem;
+      margin-bottom: 3rem;
+    }
+
+    .footer-logo { display: inline-block; }
+    .footer-logo-inner {
+      width: 174px;
+      aspect-ratio: 87 / 20;
+      filter: invert(1);
+      opacity: 0.85;
+      display: block;
+    }
+    .footer-logo svg { width: 100%; height: 100%; display: block; }
+
+    .footer-tagline {
+      font-size: 0.88rem;
+      color: rgba(240,240,240,0.35);
+      font-style: italic;
+      margin-top: 0.6rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .footer-socials {
+      display: flex;
+      gap: 0.75rem;
+    }
+    /* TODO: Replace href="#" with actual social media profile URLs */
+    .social-btn {
+      width: 40px; height: 40px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: rgba(240,240,240,0.5);
+      text-decoration: none;
+      transition: background 0.2s, color 0.2s, border-color 0.2s, transform 0.2s;
+    }
+    .social-btn:hover {
+      background: var(--magenta);
+      color: #fff;
+      border-color: var(--magenta);
+      transform: translateY(-2px);
+    }
+    .social-btn svg { width: 17px; height: 17px; }
+
+    .footer-col-title {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--magenta);
+      margin-bottom: 1rem;
+    }
+
+    .footer-nav-list { list-style: none; display: flex; flex-direction: column; gap: 0.55rem; }
+    .footer-nav-list a {
+      color: rgba(240,240,240,0.45);
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: color 0.2s;
+    }
+    .footer-nav-list a:hover { color: var(--off-white); }
+
+    .footer-addr { font-style: normal; display: flex; flex-direction: column; gap: 0.5rem; }
+    .footer-addr a {
+      color: rgba(240,240,240,0.45);
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: color 0.2s;
+    }
+    .footer-addr a:hover { color: var(--off-white); }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255,255,255,0.06);
+      padding-top: 1.75rem;
+      text-align: center;
+    }
+    .footer-copy {
+      font-size: 0.78rem;
+      color: rgba(240,240,240,0.2);
+    }
+
+    /* ── SCROLL REVEAL ───────────────────────────────────────── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.65s ease, transform 0.65s ease;
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .delay-1 { transition-delay: 0.12s; }
+    .delay-2 { transition-delay: 0.22s; }
+    .delay-3 { transition-delay: 0.34s; }
+
+    /* ── RESPONSIVE ──────────────────────────────────────────── */
+    @media (max-width: 1024px) {
+      .services-grid     { grid-template-columns: repeat(2, 1fr); }
+      .video-grid        { grid-template-columns: 1fr 1fr; }
+      .testimonials-grid { grid-template-columns: repeat(2, 1fr); }
+      .booking-grid      { grid-template-columns: 1fr; gap: 3rem; }
+      .footer-top        { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 768px) {
+      :root { --nav-h: 60px; }
+      section { padding: 4rem 1.25rem; }
+
+      .hamburger { display: flex; }
+
+      .nav-links {
+        display: none;
+        position: fixed;
+        top: var(--nav-h);
+        left: 0; right: 0; bottom: 0;
+        flex-direction: column;
+        gap: 1.75rem;
+        background: rgba(7, 0, 18, 0.97);
+        padding: 3rem 2rem;
+        overflow-y: auto;
+      }
+      .nav-links.open { display: flex; }
+      .nav-links a { font-size: 1.2rem; }
+      .nav-links .cta {
+        align-self: flex-start;
+        padding: 0.75rem 2rem;
+      }
+
+      .services-grid     { grid-template-columns: 1fr; }
+      .video-grid        { grid-template-columns: 1fr; }
+      .testimonials-grid { grid-template-columns: 1fr; }
+      .form-row-2        { grid-template-columns: 1fr; }
+      .footer-top        { grid-template-columns: 1fr; gap: 2rem; }
+
+      .hero-ctas { flex-direction: column; align-items: center; }
+      .hero-ctas .btn-primary,
+      .hero-ctas .btn-outline { width: 260px; text-align: center; }
+    }
+
+    @media (max-width: 480px) {
+      .booking-form { padding: 1.75rem 1.25rem; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Skip to content (accessibility + SEO) -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       NAVIGATION
+  ═══════════════════════════════════════════════════════════ -->
+  <header role="banner">
+    <nav class="nav" aria-label="Main navigation">
+
+      <a href="#hero" class="nav-logo" aria-label="MK Pub Entertainment — home">
+        <div style="filter: invert(1); width: 240px; height: 55px; display: block;">
+          <svg width="100%" height="100%" viewBox="400 130 870 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+            <g fill="#000000"><path d="M519.05 279.58 c-11.72 -1.28 -23.63 -4.52 -33.40 -9.16 -20.27 -9.59 -33.28 -26.74 -38.10 -50.19 -1.22 -5.80 -2.44 -17.16 -2.44 -23.02 l-0.06 -3.36 -2.08 4.09 c-4.27 8.24 -9.34 22.47 -11.66 32.54 -0.55 2.38 -0.92 6.78 -0.92 9.89 0.06 5.43 0 5.74 -1.71 7.63 -1.77 1.95 -1.95 2.01 -7.39 2.26 -6.23 0.18 -9.59 -0.79 -11.23 -3.30 -2.87 -4.40 -4.34 -16.67 -3.85 -32.06 0.24 -6.23 0.55 -11.97 0.79 -12.82 0.24 -0.85 0.24 -1.34 0 -1.10 -0.73 0.61 -4.46 13.37 -7.75 26.44 -2.56 10.14 -3.17 13.55 -3.54 20.21 -0.49 8.67 -1.22 10.87 -4.46 13.25 -4.15 3.11 -12.64 1.59 -15.94 -2.75 -4.52 -5.86 -7.20 -22.53 -7.39 -44.88 0 -7.51 -0.12 -13.62 -0.24 -13.62 -0.06 0 -1.16 0.67 -2.44 1.47 -7.27 4.58 -19.42 9.59 -29.80 12.21 -12.33 3.24 -20.94 4.15 -41.58 4.46 -25.34 0.43 -45.43 -0.92 -96.29 -6.53 -59.53 -6.53 -65.39 -6.96 -93.78 -6.96 -21.43 -0.06 -24.24 0.06 -32.18 1.34 -15.33 2.44 -22.16 4.95 -38.04 14.10 -9.16 5.25 -11.97 6.17 -19.17 6.17 -9.83 0 -13.43 -3.11 -13.49 -11.60 0 -6.04 1.04 -8.61 4.88 -12.52 5.56 -5.50 15.45 -9.46 29.12 -11.60 13.74 -2.20 66.74 -2.20 91.77 0 11.91 1.04 36.21 3.66 72.66 7.94 48.97 5.74 73.39 7.69 95.25 7.75 33.95 0.06 55.81 -6.47 72.72 -21.68 2.56 -2.32 3.17 -3.30 3.48 -5.37 0.67 -5.01 4.34 -6.96 12.46 -6.59 4.15 0.18 5.25 0.49 7.39 2.01 4.09 2.81 5.01 5.50 5.01 14.47 l0.06 7.57 2.44 -6.41 c4.88 -12.88 10.44 -22.59 14.78 -25.71 2.14 -1.59 2.93 -1.77 6.78 -1.77 3.60 0 4.76 0.24 6.53 1.47 3.97 2.75 6.04 9.40 6.04 19.90 l0 5.19 2.44 -4.09 c3.05 -5.13 7.88 -10.44 10.62 -11.72 3.05 -1.47 11.30 -1.34 14.29 0.18 4.70 2.44 7.45 6.96 8.61 14.10 0.37 2.20 0.92 10.01 1.28 17.40 0.43 8.91 0.98 15.14 1.77 18.62 4.88 21.61 16.67 35.11 35.96 41.15 9.22 2.87 15.63 3.66 30.04 3.60 30.28 -0.06 58.37 -5.31 82.61 -15.45 2.56 -1.04 4.70 -2.14 4.70 -2.44 0 -0.24 -1.47 -1.40 -3.17 -2.50 -5.25 -3.36 -15.02 -11.42 -21.49 -17.58 -17.16 -16.67 -27.35 -33.28 -31.99 -52.20 -1.53 -6.41 -1.47 -26.01 0.06 -31.20 2.93 -9.40 8.98 -16.97 16.42 -20.45 10.01 -4.70 25.95 -3.36 35.66 2.93 6.78 4.46 15.39 15.14 18.56 23.20 0.43 1.04 0.92 1.95 1.16 1.95 0.18 0 1.04 -1.28 1.89 -2.87 1.95 -3.66 7.63 -11.30 10.93 -14.71 6.17 -6.29 13.55 -10.75 20.88 -12.64 2.93 -0.79 5.86 -0.98 11.54 -0.79 6.96 0.18 7.94 0.37 11.30 1.95 7.33 3.60 12.88 11.36 15.33 21.43 1.34 5.37 1.53 21.68 0.31 28.39 -4.70 26.13 -24.55 53.12 -53.18 72.29 l-5.07 3.42 5.80 2.69 c24.79 11.48 57.39 17.46 77.48 14.17 19.72 -3.24 39.63 -13.68 57.46 -30.04 9.10 -8.43 19.05 -20.39 25.34 -30.47 l1.89 -3.05 0.31 -14.65 c0.49 -19.48 2.44 -33.34 7.14 -49.46 6.29 -21.80 17.04 -41.95 29.19 -54.71 5.98 -6.29 10.87 -10.01 16.97 -12.88 3.91 -1.83 4.70 -2.01 10.32 -2.01 5.13 0 6.53 0.24 8.61 1.34 3.48 1.83 6.59 5.50 8.24 9.71 2.01 5.07 2.01 18.07 0.06 26.01 -3.79 15.39 -14.78 36.70 -27.23 53 l-2.08 2.75 7.14 0 c6.90 0 7.27 0.06 10.14 1.83 2.20 1.34 3.48 2.75 4.70 5.13 1.53 2.93 1.71 3.85 1.71 9.52 0 9.89 -2.56 16.79 -9.52 25.40 -3.30 4.15 -10.50 10.38 -14.78 12.76 l-2.44 1.40 2.32 6.84 c5.68 16.42 12.82 29.37 18.32 33.28 1.65 1.16 1.95 1.22 3.48 0.37 4.64 -2.38 9.28 -8.49 19.72 -26.01 4.09 -6.90 9.04 -14.71 10.93 -17.40 12.39 -17.65 24.30 -25.71 42.13 -28.70 5.62 -0.98 9.22 -1.04 28.70 -0.73 21.92 0.37 33.22 0.98 81.57 4.70 78.64 6.04 109.05 6.11 132.25 0.31 9.16 -2.32 15.63 -5.19 27.41 -12.15 7.51 -4.46 12.03 -5.86 18.87 -5.86 10.56 0.06 15.02 4.64 13.86 14.29 -1.65 13.19 -18.07 21 -49.82 23.51 -26.74 2.14 -49.52 1.28 -112.65 -4.21 -80.60 -7.08 -91.83 -7.88 -114.48 -8.36 -18.87 -0.37 -23.39 0 -30.71 2.56 -10.44 3.60 -18.99 11.05 -27.54 24.12 -2.14 3.17 -6.84 10.87 -10.44 17.10 -9.10 15.51 -13.19 21.55 -18.26 26.62 -6.04 6.04 -8.85 7.27 -16.24 7.20 -6.59 0 -9.83 -0.98 -15.57 -4.40 -7.57 -4.58 -14.53 -13.01 -21.06 -25.52 -1.77 -3.30 -3.05 -5.37 -2.87 -4.52 0.18 0.85 0.55 5.37 0.79 10.07 0.37 7.45 0.24 8.85 -0.61 10.56 -1.59 3.11 -4.27 4.40 -9.10 4.40 -6.04 0 -10.26 -2.08 -12.33 -6.17 -1.16 -2.14 -3.05 -12.39 -4.58 -24.67 -0.67 -5.68 -1.34 -10.62 -1.40 -10.93 -0.12 -0.24 -1.77 1.65 -3.79 4.27 -4.34 5.80 -15.33 17.22 -21.68 22.53 -15.26 12.76 -34.07 21.86 -53.36 25.71 -9.40 1.89 -27.05 2.63 -37.92 1.53 -20.21 -2.01 -47.69 -10.38 -63.07 -19.11 l-3.24 -1.83 -7.75 3.48 c-19.54 8.85 -42.98 14.71 -67.84 17.10 -10.32 0.98 -36.57 1.10 -45.18 0.24z m132.43 -44.76 c8.61 -6.11 21.80 -18.81 27.78 -26.68 17.52 -23.26 23.08 -50.86 12.88 -64.23 -4.03 -5.31 -9.40 -6.66 -16.55 -4.15 -9.95 3.54 -18.62 12.27 -27.48 27.72 -2.26 3.91 -4.58 7.45 -5.19 7.75 -1.89 0.98 -5.80 0.73 -6.84 -0.43 -0.49 -0.61 -2.38 -3.85 -4.15 -7.20 -8.61 -16.18 -17.71 -25.89 -26.50 -28.39 -7.57 -2.08 -16.30 2.50 -20.15 10.56 -4.95 10.62 -3.24 24.85 5.13 41.64 8.61 17.34 24.18 34.38 43.47 47.63 l5.62 3.79 2.50 -1.53 c1.34 -0.85 5.62 -3.72 9.46 -6.47z m219.20 -48.66 c3.60 -4.15 6.47 -8.91 5.86 -9.52 -0.61 -0.61 -4.64 2.87 -7.02 6.11 -1.28 1.77 -3.30 4.82 -4.40 6.84 l-2.01 3.66 1.95 -1.47 c1.10 -0.73 3.60 -3.30 5.62 -5.62z m-12.39 -21.61 c13.80 -18.38 25.03 -40.79 28.21 -56.48 1.16 -5.68 1.83 -12.33 1.34 -13.55 -0.37 -1.04 -0.79 -0.79 -3.54 2.14 -8.91 9.40 -19.42 30.90 -25.52 52.08 -1.95 6.90 -3.91 14.90 -4.82 19.78 -0.43 2.44 -0.49 2.50 4.34 -3.97z"/></g>
+            <g fill="#ffffff"><path d="M562.40 277.51 c27.41 -2.63 55.50 -10.20 73.88 -19.97 l3.42 -1.77 3.72 2.20 c15.63 9.16 43.72 17.83 64.54 19.90 31.44 3.11 62.95 -6.66 87.62 -27.23 6.96 -5.80 18.07 -17.58 23.51 -24.91 2.63 -3.60 5.07 -6.53 5.31 -6.53 0.24 0 0.49 1.34 0.49 3.05 0 7.39 4.15 34.07 5.80 37.18 2.69 5.25 10.20 7.75 14.78 4.95 3.72 -2.26 4.09 -3.85 3.30 -14.29 -0.79 -10.62 -0.85 -18.68 -0.18 -18.68 0.24 0 1.34 2.38 2.50 5.37 4.15 10.69 10.75 21.31 17.16 27.60 6.96 6.96 14.23 10.50 21.37 10.56 5.37 0.06 8.91 -1.71 14.41 -7.14 5.07 -5.07 9.16 -11.11 18.26 -26.62 8.30 -14.29 13.31 -21.86 17.71 -26.87 8.24 -9.46 17.40 -14.71 29 -16.55 3.17 -0.49 10.44 -0.61 23.81 -0.37 24.24 0.49 33.89 1.16 116.31 8.36 54.40 4.76 77.79 5.92 98.49 4.88 27.96 -1.40 43.41 -4.95 53 -12.21 7.27 -5.50 9.46 -14.47 4.70 -19.05 -5.68 -5.43 -14.78 -4.64 -26.44 2.32 -11.78 6.96 -18.26 9.83 -27.41 12.15 -23.51 5.86 -56.30 5.80 -135.91 -0.31 -47.01 -3.60 -59.53 -4.34 -79.68 -4.70 -17.83 -0.31 -21.31 -0.24 -26.87 0.73 -17.89 2.99 -29.80 11.05 -42.19 28.70 -1.89 2.69 -6.84 10.50 -10.93 17.40 -12.76 21.43 -17.52 26.87 -23.39 26.87 -5.98 0 -14.78 -14.17 -22.16 -35.66 -1.47 -4.34 -2.69 -8.06 -2.69 -8.30 0 -0.31 1.47 -1.40 3.24 -2.44 14.65 -8.98 24.24 -23.32 24.24 -36.33 0 -9.04 -5.01 -14.41 -13.80 -14.84 -5.68 -0.31 -9.34 1.28 -14.78 6.23 -5.80 5.43 -12.46 16.24 -16.36 26.62 -2.14 5.74 -2.87 6.66 -2.44 3.05 0.18 -1.53 0.49 -5.07 0.73 -7.94 l0.37 -5.19 5.01 -5.50 c25.52 -28.03 41.34 -53.85 46.89 -76.51 1.89 -7.69 1.83 -17.40 -0.06 -22.35 -1.65 -4.21 -4.76 -7.88 -8.24 -9.71 -3.97 -2.08 -9.89 -1.83 -15.26 0.67 -18.81 8.79 -36.82 35.17 -46.16 67.59 -4.70 16.12 -6.66 29.98 -7.14 49.46 l-0.31 14.65 -1.89 3.05 c-11.54 18.56 -28.94 35.96 -46.83 46.71 -8.18 4.95 -13.49 7.39 -22.47 10.38 -11.05 3.66 -17.52 4.46 -31.75 4.09 -17.22 -0.43 -33.46 -3.54 -49.88 -9.52 -8.06 -2.99 -21.68 -9.10 -21.68 -9.77 0 -0.18 1.77 -1.40 3.97 -2.69 5.62 -3.36 14.96 -10.44 21.55 -16.24 18.56 -16.49 32.12 -38.83 35.60 -58.68 1.16 -6.47 0.98 -19.42 -0.31 -24.73 -2.44 -10.01 -8 -17.83 -15.33 -21.37 -3.05 -1.53 -4.52 -1.83 -9.46 -2.01 -6.84 -0.31 -11.54 0.73 -17.71 3.85 -9.52 4.76 -18.81 14.65 -24.97 26.50 -1.47 2.81 -2.81 4.82 -3.05 4.52 -0.24 -0.24 -1.10 -2.14 -1.83 -4.15 -3.79 -9.59 -11.85 -20.03 -19.17 -24.79 -6.72 -4.34 -16.30 -6.47 -24.18 -5.37 -11.30 1.59 -20.45 10.20 -24.24 22.84 -1.59 5.13 -1.65 21.31 -0.12 27.54 4.64 18.93 14.84 35.54 31.99 52.20 7.14 6.90 16.30 14.29 23.32 18.74 2.75 1.77 5.01 3.36 5.01 3.48 0 0.49 -7.94 3.91 -16.30 7.08 -21.43 8 -47.87 12.27 -76.51 12.39 -16.36 0 -22.29 -0.67 -31.87 -3.66 -19.29 -6.04 -31.08 -19.54 -35.96 -41.15 -0.79 -3.48 -1.34 -9.71 -1.77 -18.62 -0.92 -19.23 -1.95 -24.36 -5.98 -28.58 -3.42 -3.66 -9.46 -5.13 -13.80 -3.48 -4.58 1.71 -11.17 10.38 -15.33 20.21 -2.81 6.66 -3.72 8.06 -3.11 4.82 0.18 -1.16 0.55 -5.68 0.73 -10.07 0.61 -13.01 -1.22 -20.76 -5.80 -23.87 -3.05 -2.08 -6.47 -1.95 -9.65 0.31 -5.92 4.27 -13.74 20.15 -18.81 38.28 -2.81 9.83 -2.75 9.65 -2.99 9.34 -0.18 -0.12 0.06 -7.02 0.43 -15.26 0.67 -14.90 0.61 -15.02 -0.73 -17.77 -1.77 -3.79 -5.25 -6.11 -9.46 -6.47 -6.04 -0.49 -9.95 1.89 -10.56 6.53 -0.31 2.08 -0.92 3.05 -3.48 5.37 -9.89 8.85 -20.58 14.29 -35.23 17.89 -11.97 2.93 -21.43 3.85 -39.32 3.79 -23.57 0 -46.95 -1.89 -97.08 -7.75 -36.39 -4.27 -60.69 -6.90 -72.66 -7.94 -24.18 -2.14 -74.43 -2.14 -87.80 -0.06 -13.62 2.14 -23.69 6.04 -29.12 11.36 -3.66 3.60 -5.07 6.47 -5.07 10.81 0 6.17 4.40 9.95 11.54 9.95 5.31 0 8.73 -1.22 17.34 -6.17 15.88 -9.16 22.71 -11.66 38.04 -14.10 8 -1.28 10.62 -1.40 34.01 -1.34 30.41 0 35.29 0.37 95.62 6.96 50.07 5.50 71.32 6.96 94.52 6.53 18.56 -0.37 27.90 -1.40 39.69 -4.46 11.91 -3.05 24.12 -8.36 32.36 -13.98 2.32 -1.53 4.21 -2.75 4.34 -2.63 0.06 0.12 -0.12 2.69 -0.43 5.68 -1.34 13.43 1.16 41.09 4.70 50.92 2.08 5.98 7.14 9.77 11.78 8.91 4.40 -0.85 8.06 -6.78 7.20 -11.85 -0.49 -3.11 0.61 -9.89 3.66 -22.29 4.95 -19.90 11.36 -38.95 12.70 -37.61 0.12 0.18 -0.24 5.80 -0.92 12.52 -0.61 6.72 -1.10 15.08 -1.16 18.62 0 10.81 1.71 21.86 4.03 25.34 1.53 2.32 5.19 3.54 9.46 3.24 3.36 -0.24 3.97 -0.49 5.62 -2.32 1.59 -1.83 1.77 -2.26 1.40 -4.88 -0.55 -3.97 0.55 -11.17 3.05 -19.72 4.70 -16.30 13.31 -34.74 14.96 -32.12 0.31 0.49 0.55 2.81 0.55 5.13 0 6.47 1.16 17.65 2.44 23.93 4.82 23.45 17.83 40.60 38.10 50.19 9.77 4.64 21.68 7.88 33.40 9.16 8.49 0.85 31.32 0.73 41.52 -0.24z"/><path d="M632.74 241.30 c-13.19 -8.98 -26.07 -21.13 -34.86 -32.79 -6.23 -8.24 -12.88 -21.25 -15.14 -29.61 -1.89 -7.14 -2.63 -18.20 -1.47 -23.93 2.14 -11.05 8.98 -17.58 18.81 -18.07 5.50 -0.31 8.91 0.61 13.43 3.54 7.20 4.64 13.43 12.52 20.52 25.71 1.89 3.60 3.85 6.90 4.40 7.27 1.77 1.53 3.60 -0.24 7.88 -7.75 11.23 -19.66 22.77 -29 35.72 -29.12 3.79 0 5.07 0.24 7.33 1.47 3.30 1.83 6.17 5.50 8 10.20 2.08 5.37 2.32 17.22 0.55 25.83 -2.56 12.58 -8.12 24.48 -16.79 35.96 -4.76 6.23 -17.16 18.74 -23.20 23.39 -5.56 4.21 -17.46 12.09 -18.26 12.09 -0.43 0 -3.48 -1.89 -6.90 -4.15z"/><path d="M857.86 199.54 c0 -1.59 6.59 -14.23 9.40 -18.01 3.36 -4.58 7.33 -7.63 9.52 -7.39 1.28 0.18 1.53 0.55 1.71 2.44 0.24 2.93 -1.40 6.11 -5.92 11.30 -2.99 3.54 -12.39 11.66 -14.17 12.27 -0.31 0.12 -0.55 -0.12 -0.55 -0.61z"/><path d="M849.92 178.17 c0 -1.83 4.82 -23.57 6.72 -30.10 4.95 -17.40 12.39 -34.44 20.03 -45.85 4.09 -6.04 9.95 -12.03 11.54 -11.72 2.26 0.43 2.38 7.20 0.37 17.83 -2.56 13.98 -10.44 31.44 -21.86 48.60 -6.53 9.89 -16.79 22.84 -16.79 21.25z"/></g>
+          </svg>
+        </div>
+      </a>
+
+      <button class="hamburger" id="hamburger" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="nav-links">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav-links" id="nav-links" role="list">
+        <li><a href="#what-we-do">What We Do</a></li>
+        <li><a href="#videos">Videos</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#booking" class="cta">Book Now</a></li>
+      </ul>
+
+    </nav>
+  </header>
+
+  <!-- ═══════════════════════════════════════════════════════════
+       MAIN
+  ═══════════════════════════════════════════════════════════ -->
+  <main id="main-content">
+
+    <!-- ── HERO ──────────────────────────────────────────────── -->
+    <section class="hero" id="hero" aria-labelledby="hero-h1">
+      <canvas id="particle-canvas" aria-hidden="true"></canvas>
+
+      <div class="hero-content">
+        <!-- Logo rendered large — invert(1) flips black fills to white on dark background -->
+        <div class="hero-logo" aria-hidden="true">
+          <svg width="100%" height="100%" viewBox="400 130 870 200" xmlns="http://www.w3.org/2000/svg" focusable="false">
+            <g fill="#000000"><path d="M519.05 279.58 c-11.72 -1.28 -23.63 -4.52 -33.40 -9.16 -20.27 -9.59 -33.28 -26.74 -38.10 -50.19 -1.22 -5.80 -2.44 -17.16 -2.44 -23.02 l-0.06 -3.36 -2.08 4.09 c-4.27 8.24 -9.34 22.47 -11.66 32.54 -0.55 2.38 -0.92 6.78 -0.92 9.89 0.06 5.43 0 5.74 -1.71 7.63 -1.77 1.95 -1.95 2.01 -7.39 2.26 -6.23 0.18 -9.59 -0.79 -11.23 -3.30 -2.87 -4.40 -4.34 -16.67 -3.85 -32.06 0.24 -6.23 0.55 -11.97 0.79 -12.82 0.24 -0.85 0.24 -1.34 0 -1.10 -0.73 0.61 -4.46 13.37 -7.75 26.44 -2.56 10.14 -3.17 13.55 -3.54 20.21 -0.49 8.67 -1.22 10.87 -4.46 13.25 -4.15 3.11 -12.64 1.59 -15.94 -2.75 -4.52 -5.86 -7.20 -22.53 -7.39 -44.88 0 -7.51 -0.12 -13.62 -0.24 -13.62 -0.06 0 -1.16 0.67 -2.44 1.47 -7.27 4.58 -19.42 9.59 -29.80 12.21 -12.33 3.24 -20.94 4.15 -41.58 4.46 -25.34 0.43 -45.43 -0.92 -96.29 -6.53 -59.53 -6.53 -65.39 -6.96 -93.78 -6.96 -21.43 -0.06 -24.24 0.06 -32.18 1.34 -15.33 2.44 -22.16 4.95 -38.04 14.10 -9.16 5.25 -11.97 6.17 -19.17 6.17 -9.83 0 -13.43 -3.11 -13.49 -11.60 0 -6.04 1.04 -8.61 4.88 -12.52 5.56 -5.50 15.45 -9.46 29.12 -11.60 13.74 -2.20 66.74 -2.20 91.77 0 11.91 1.04 36.21 3.66 72.66 7.94 48.97 5.74 73.39 7.69 95.25 7.75 33.95 0.06 55.81 -6.47 72.72 -21.68 2.56 -2.32 3.17 -3.30 3.48 -5.37 0.67 -5.01 4.34 -6.96 12.46 -6.59 4.15 0.18 5.25 0.49 7.39 2.01 4.09 2.81 5.01 5.50 5.01 14.47 l0.06 7.57 2.44 -6.41 c4.88 -12.88 10.44 -22.59 14.78 -25.71 2.14 -1.59 2.93 -1.77 6.78 -1.77 3.60 0 4.76 0.24 6.53 1.47 3.97 2.75 6.04 9.40 6.04 19.90 l0 5.19 2.44 -4.09 c3.05 -5.13 7.88 -10.44 10.62 -11.72 3.05 -1.47 11.30 -1.34 14.29 0.18 4.70 2.44 7.45 6.96 8.61 14.10 0.37 2.20 0.92 10.01 1.28 17.40 0.43 8.91 0.98 15.14 1.77 18.62 4.88 21.61 16.67 35.11 35.96 41.15 9.22 2.87 15.63 3.66 30.04 3.60 30.28 -0.06 58.37 -5.31 82.61 -15.45 2.56 -1.04 4.70 -2.14 4.70 -2.44 0 -0.24 -1.47 -1.40 -3.17 -2.50 -5.25 -3.36 -15.02 -11.42 -21.49 -17.58 -17.16 -16.67 -27.35 -33.28 -31.99 -52.20 -1.53 -6.41 -1.47 -26.01 0.06 -31.20 2.93 -9.40 8.98 -16.97 16.42 -20.45 10.01 -4.70 25.95 -3.36 35.66 2.93 6.78 4.46 15.39 15.14 18.56 23.20 0.43 1.04 0.92 1.95 1.16 1.95 0.18 0 1.04 -1.28 1.89 -2.87 1.95 -3.66 7.63 -11.30 10.93 -14.71 6.17 -6.29 13.55 -10.75 20.88 -12.64 2.93 -0.79 5.86 -0.98 11.54 -0.79 6.96 0.18 7.94 0.37 11.30 1.95 7.33 3.60 12.88 11.36 15.33 21.43 1.34 5.37 1.53 21.68 0.31 28.39 -4.70 26.13 -24.55 53.12 -53.18 72.29 l-5.07 3.42 5.80 2.69 c24.79 11.48 57.39 17.46 77.48 14.17 19.72 -3.24 39.63 -13.68 57.46 -30.04 9.10 -8.43 19.05 -20.39 25.34 -30.47 l1.89 -3.05 0.31 -14.65 c0.49 -19.48 2.44 -33.34 7.14 -49.46 6.29 -21.80 17.04 -41.95 29.19 -54.71 5.98 -6.29 10.87 -10.01 16.97 -12.88 3.91 -1.83 4.70 -2.01 10.32 -2.01 5.13 0 6.53 0.24 8.61 1.34 3.48 1.83 6.59 5.50 8.24 9.71 2.01 5.07 2.01 18.07 0.06 26.01 -3.79 15.39 -14.78 36.70 -27.23 53 l-2.08 2.75 7.14 0 c6.90 0 7.27 0.06 10.14 1.83 2.20 1.34 3.48 2.75 4.70 5.13 1.53 2.93 1.71 3.85 1.71 9.52 0 9.89 -2.56 16.79 -9.52 25.40 -3.30 4.15 -10.50 10.38 -14.78 12.76 l-2.44 1.40 2.32 6.84 c5.68 16.42 12.82 29.37 18.32 33.28 1.65 1.16 1.95 1.22 3.48 0.37 4.64 -2.38 9.28 -8.49 19.72 -26.01 4.09 -6.90 9.04 -14.71 10.93 -17.40 12.39 -17.65 24.30 -25.71 42.13 -28.70 5.62 -0.98 9.22 -1.04 28.70 -0.73 21.92 0.37 33.22 0.98 81.57 4.70 78.64 6.04 109.05 6.11 132.25 0.31 9.16 -2.32 15.63 -5.19 27.41 -12.15 7.51 -4.46 12.03 -5.86 18.87 -5.86 10.56 0.06 15.02 4.64 13.86 14.29 -1.65 13.19 -18.07 21 -49.82 23.51 -26.74 2.14 -49.52 1.28 -112.65 -4.21 -80.60 -7.08 -91.83 -7.88 -114.48 -8.36 -18.87 -0.37 -23.39 0 -30.71 2.56 -10.44 3.60 -18.99 11.05 -27.54 24.12 -2.14 3.17 -6.84 10.87 -10.44 17.10 -9.10 15.51 -13.19 21.55 -18.26 26.62 -6.04 6.04 -8.85 7.27 -16.24 7.20 -6.59 0 -9.83 -0.98 -15.57 -4.40 -7.57 -4.58 -14.53 -13.01 -21.06 -25.52 -1.77 -3.30 -3.05 -5.37 -2.87 -4.52 0.18 0.85 0.55 5.37 0.79 10.07 0.37 7.45 0.24 8.85 -0.61 10.56 -1.59 3.11 -4.27 4.40 -9.10 4.40 -6.04 0 -10.26 -2.08 -12.33 -6.17 -1.16 -2.14 -3.05 -12.39 -4.58 -24.67 -0.67 -5.68 -1.34 -10.62 -1.40 -10.93 -0.12 -0.24 -1.77 1.65 -3.79 4.27 -4.34 5.80 -15.33 17.22 -21.68 22.53 -15.26 12.76 -34.07 21.86 -53.36 25.71 -9.40 1.89 -27.05 2.63 -37.92 1.53 -20.21 -2.01 -47.69 -10.38 -63.07 -19.11 l-3.24 -1.83 -7.75 3.48 c-19.54 8.85 -42.98 14.71 -67.84 17.10 -10.32 0.98 -36.57 1.10 -45.18 0.24z m132.43 -44.76 c8.61 -6.11 21.80 -18.81 27.78 -26.68 17.52 -23.26 23.08 -50.86 12.88 -64.23 -4.03 -5.31 -9.40 -6.66 -16.55 -4.15 -9.95 3.54 -18.62 12.27 -27.48 27.72 -2.26 3.91 -4.58 7.45 -5.19 7.75 -1.89 0.98 -5.80 0.73 -6.84 -0.43 -0.49 -0.61 -2.38 -3.85 -4.15 -7.20 -8.61 -16.18 -17.71 -25.89 -26.50 -28.39 -7.57 -2.08 -16.30 2.50 -20.15 10.56 -4.95 10.62 -3.24 24.85 5.13 41.64 8.61 17.34 24.18 34.38 43.47 47.63 l5.62 3.79 2.50 -1.53 c1.34 -0.85 5.62 -3.72 9.46 -6.47z m219.20 -48.66 c3.60 -4.15 6.47 -8.91 5.86 -9.52 -0.61 -0.61 -4.64 2.87 -7.02 6.11 -1.28 1.77 -3.30 4.82 -4.40 6.84 l-2.01 3.66 1.95 -1.47 c1.10 -0.73 3.60 -3.30 5.62 -5.62z m-12.39 -21.61 c13.80 -18.38 25.03 -40.79 28.21 -56.48 1.16 -5.68 1.83 -12.33 1.34 -13.55 -0.37 -1.04 -0.79 -0.79 -3.54 2.14 -8.91 9.40 -19.42 30.90 -25.52 52.08 -1.95 6.90 -3.91 14.90 -4.82 19.78 -0.43 2.44 -0.49 2.50 4.34 -3.97z"/></g>
+            <g fill="#ffffff"><path d="M562.40 277.51 c27.41 -2.63 55.50 -10.20 73.88 -19.97 l3.42 -1.77 3.72 2.20 c15.63 9.16 43.72 17.83 64.54 19.90 31.44 3.11 62.95 -6.66 87.62 -27.23 6.96 -5.80 18.07 -17.58 23.51 -24.91 2.63 -3.60 5.07 -6.53 5.31 -6.53 0.24 0 0.49 1.34 0.49 3.05 0 7.39 4.15 34.07 5.80 37.18 2.69 5.25 10.20 7.75 14.78 4.95 3.72 -2.26 4.09 -3.85 3.30 -14.29 -0.79 -10.62 -0.85 -18.68 -0.18 -18.68 0.24 0 1.34 2.38 2.50 5.37 4.15 10.69 10.75 21.31 17.16 27.60 6.96 6.96 14.23 10.50 21.37 10.56 5.37 0.06 8.91 -1.71 14.41 -7.14 5.07 -5.07 9.16 -11.11 18.26 -26.62 8.30 -14.29 13.31 -21.86 17.71 -26.87 8.24 -9.46 17.40 -14.71 29 -16.55 3.17 -0.49 10.44 -0.61 23.81 -0.37 24.24 0.49 33.89 1.16 116.31 8.36 54.40 4.76 77.79 5.92 98.49 4.88 27.96 -1.40 43.41 -4.95 53 -12.21 7.27 -5.50 9.46 -14.47 4.70 -19.05 -5.68 -5.43 -14.78 -4.64 -26.44 2.32 -11.78 6.96 -18.26 9.83 -27.41 12.15 -23.51 5.86 -56.30 5.80 -135.91 -0.31 -47.01 -3.60 -59.53 -4.34 -79.68 -4.70 -17.83 -0.31 -21.31 -0.24 -26.87 0.73 -17.89 2.99 -29.80 11.05 -42.19 28.70 -1.89 2.69 -6.84 10.50 -10.93 17.40 -12.76 21.43 -17.52 26.87 -23.39 26.87 -5.98 0 -14.78 -14.17 -22.16 -35.66 -1.47 -4.34 -2.69 -8.06 -2.69 -8.30 0 -0.31 1.47 -1.40 3.24 -2.44 14.65 -8.98 24.24 -23.32 24.24 -36.33 0 -9.04 -5.01 -14.41 -13.80 -14.84 -5.68 -0.31 -9.34 1.28 -14.78 6.23 -5.80 5.43 -12.46 16.24 -16.36 26.62 -2.14 5.74 -2.87 6.66 -2.44 3.05 0.18 -1.53 0.49 -5.07 0.73 -7.94 l0.37 -5.19 5.01 -5.50 c25.52 -28.03 41.34 -53.85 46.89 -76.51 1.89 -7.69 1.83 -17.40 -0.06 -22.35 -1.65 -4.21 -4.76 -7.88 -8.24 -9.71 -3.97 -2.08 -9.89 -1.83 -15.26 0.67 -18.81 8.79 -36.82 35.17 -46.16 67.59 -4.70 16.12 -6.66 29.98 -7.14 49.46 l-0.31 14.65 -1.89 3.05 c-11.54 18.56 -28.94 35.96 -46.83 46.71 -8.18 4.95 -13.49 7.39 -22.47 10.38 -11.05 3.66 -17.52 4.46 -31.75 4.09 -17.22 -0.43 -33.46 -3.54 -49.88 -9.52 -8.06 -2.99 -21.68 -9.10 -21.68 -9.77 0 -0.18 1.77 -1.40 3.97 -2.69 5.62 -3.36 14.96 -10.44 21.55 -16.24 18.56 -16.49 32.12 -38.83 35.60 -58.68 1.16 -6.47 0.98 -19.42 -0.31 -24.73 -2.44 -10.01 -8 -17.83 -15.33 -21.37 -3.05 -1.53 -4.52 -1.83 -9.46 -2.01 -6.84 -0.31 -11.54 0.73 -17.71 3.85 -9.52 4.76 -18.81 14.65 -24.97 26.50 -1.47 2.81 -2.81 4.82 -3.05 4.52 -0.24 -0.24 -1.10 -2.14 -1.83 -4.15 -3.79 -9.59 -11.85 -20.03 -19.17 -24.79 -6.72 -4.34 -16.30 -6.47 -24.18 -5.37 -11.30 1.59 -20.45 10.20 -24.24 22.84 -1.59 5.13 -1.65 21.31 -0.12 27.54 4.64 18.93 14.84 35.54 31.99 52.20 7.14 6.90 16.30 14.29 23.32 18.74 2.75 1.77 5.01 3.36 5.01 3.48 0 0.49 -7.94 3.91 -16.30 7.08 -21.43 8 -47.87 12.27 -76.51 12.39 -16.36 0 -22.29 -0.67 -31.87 -3.66 -19.29 -6.04 -31.08 -19.54 -35.96 -41.15 -0.79 -3.48 -1.34 -9.71 -1.77 -18.62 -0.92 -19.23 -1.95 -24.36 -5.98 -28.58 -3.42 -3.66 -9.46 -5.13 -13.80 -3.48 -4.58 1.71 -11.17 10.38 -15.33 20.21 -2.81 6.66 -3.72 8.06 -3.11 4.82 0.18 -1.16 0.55 -5.68 0.73 -10.07 0.61 -13.01 -1.22 -20.76 -5.80 -23.87 -3.05 -2.08 -6.47 -1.95 -9.65 0.31 -5.92 4.27 -13.74 20.15 -18.81 38.28 -2.81 9.83 -2.75 9.65 -2.99 9.34 -0.18 -0.12 0.06 -7.02 0.43 -15.26 0.67 -14.90 0.61 -15.02 -0.73 -17.77 -1.77 -3.79 -5.25 -6.11 -9.46 -6.47 -6.04 -0.49 -9.95 1.89 -10.56 6.53 -0.31 2.08 -0.92 3.05 -3.48 5.37 -9.89 8.85 -20.58 14.29 -35.23 17.89 -11.97 2.93 -21.43 3.85 -39.32 3.79 -23.57 0 -46.95 -1.89 -97.08 -7.75 -36.39 -4.27 -60.69 -6.90 -72.66 -7.94 -24.18 -2.14 -74.43 -2.14 -87.80 -0.06 -13.62 2.14 -23.69 6.04 -29.12 11.36 -3.66 3.60 -5.07 6.47 -5.07 10.81 0 6.17 4.40 9.95 11.54 9.95 5.31 0 8.73 -1.22 17.34 -6.17 15.88 -9.16 22.71 -11.66 38.04 -14.10 8 -1.28 10.62 -1.40 34.01 -1.34 30.41 0 35.29 0.37 95.62 6.96 50.07 5.50 71.32 6.96 94.52 6.53 18.56 -0.37 27.90 -1.40 39.69 -4.46 11.91 -3.05 24.12 -8.36 32.36 -13.98 2.32 -1.53 4.21 -2.75 4.34 -2.63 0.06 0.12 -0.12 2.69 -0.43 5.68 -1.34 13.43 1.16 41.09 4.70 50.92 2.08 5.98 7.14 9.77 11.78 8.91 4.40 -0.85 8.06 -6.78 7.20 -11.85 -0.49 -3.11 0.61 -9.89 3.66 -22.29 4.95 -19.90 11.36 -38.95 12.70 -37.61 0.12 0.18 -0.24 5.80 -0.92 12.52 -0.61 6.72 -1.10 15.08 -1.16 18.62 0 10.81 1.71 21.86 4.03 25.34 1.53 2.32 5.19 3.54 9.46 3.24 3.36 -0.24 3.97 -0.49 5.62 -2.32 1.59 -1.83 1.77 -2.26 1.40 -4.88 -0.55 -3.97 0.55 -11.17 3.05 -19.72 4.70 -16.30 13.31 -34.74 14.96 -32.12 0.31 0.49 0.55 2.81 0.55 5.13 0 6.47 1.16 17.65 2.44 23.93 4.82 23.45 17.83 40.60 38.10 50.19 9.77 4.64 21.68 7.88 33.40 9.16 8.49 0.85 31.32 0.73 41.52 -0.24z"/><path d="M632.74 241.30 c-13.19 -8.98 -26.07 -21.13 -34.86 -32.79 -6.23 -8.24 -12.88 -21.25 -15.14 -29.61 -1.89 -7.14 -2.63 -18.20 -1.47 -23.93 2.14 -11.05 8.98 -17.58 18.81 -18.07 5.50 -0.31 8.91 0.61 13.43 3.54 7.20 4.64 13.43 12.52 20.52 25.71 1.89 3.60 3.85 6.90 4.40 7.27 1.77 1.53 3.60 -0.24 7.88 -7.75 11.23 -19.66 22.77 -29 35.72 -29.12 3.79 0 5.07 0.24 7.33 1.47 3.30 1.83 6.17 5.50 8 10.20 2.08 5.37 2.32 17.22 0.55 25.83 -2.56 12.58 -8.12 24.48 -16.79 35.96 -4.76 6.23 -17.16 18.74 -23.20 23.39 -5.56 4.21 -17.46 12.09 -18.26 12.09 -0.43 0 -3.48 -1.89 -6.90 -4.15z"/><path d="M857.86 199.54 c0 -1.59 6.59 -14.23 9.40 -18.01 3.36 -4.58 7.33 -7.63 9.52 -7.39 1.28 0.18 1.53 0.55 1.71 2.44 0.24 2.93 -1.40 6.11 -5.92 11.30 -2.99 3.54 -12.39 11.66 -14.17 12.27 -0.31 0.12 -0.55 -0.12 -0.55 -0.61z"/><path d="M849.92 178.17 c0 -1.83 4.82 -23.57 6.72 -30.10 4.95 -17.40 12.39 -34.44 20.03 -45.85 4.09 -6.04 9.95 -12.03 11.54 -11.72 2.26 0.43 2.38 7.20 0.37 17.83 -2.56 13.98 -10.44 31.44 -21.86 48.60 -6.53 9.89 -16.79 22.84 -16.79 21.25z"/></g>
+          </svg>
+        </div>
+
+        <h1 id="hero-h1">Your Night. Our Show.</h1>
+
+        <p class="hero-sub">Professional Pub Quizzes, Karaoke &amp; Disco Bingo for pubs and venues across the UK.</p>
+
+        <div class="hero-ctas">
+          <a href="#booking" class="btn-primary">Book Us Now</a>
+          <a href="#videos"  class="btn-outline">Watch Us in Action</a>
+        </div>
+      </div>
+
+      <div class="hero-scroll" aria-hidden="true">
+        <span>Scroll</span>
+        <div class="hero-scroll-line"></div>
+      </div>
+    </section>
+
+
+    <!-- ── WHAT WE DO ─────────────────────────────────────────── -->
+    <section class="services" id="what-we-do" aria-labelledby="services-h2">
+      <div class="container">
+        <div class="section-center">
+          <span class="eyebrow reveal">What We Bring</span>
+          <h2 class="section-title reveal delay-1" id="services-h2">The Full <span class="m">Night Out</span></h2>
+          <div class="neon-rule reveal delay-2" style="margin-bottom:0"></div>
+        </div>
+
+        <div class="services-grid">
+
+          <article class="service-card reveal">
+            <span class="service-icon" aria-hidden="true">🎤</span>
+            <h3>Karaoke</h3>
+            <p>Belt it out or cheer from the sidelines — our hosted karaoke nights bring energy, laughter, and unforgettable moments to your bar. We arrive with premium sound, thousands of tracks, and a host who keeps the crowd fired up all night long.</p>
+          </article>
+
+          <article class="service-card gold-border reveal delay-1">
+            <span class="service-icon" aria-hidden="true">🎯</span>
+            <h3>Pub Quiz</h3>
+            <p>From pop culture deep cuts to classic general knowledge, our pub quizzes are crafted for maximum fun and minimum fuss. Fully hosted with bespoke rounds, tie-breakers, and the kind of friendly bickering that keeps teams coming back week after week.</p>
+          </article>
+
+          <article class="service-card reveal delay-2">
+            <span class="service-icon" aria-hidden="true">🪩</span>
+            <h3>Disco Bingo</h3>
+            <p>Bingo meets the dancefloor — identify chart-topping hits, fill your card, and dance your way to victory. It's ridiculous fun, insanely popular, and guaranteed to pack your venue. Disco Bingo is the event that leaves everyone talking Monday morning.</p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ── VIDEO SHOWCASE ──────────────────────────────────────── -->
+    <section class="videos" id="videos" aria-labelledby="videos-h2">
+      <div class="container">
+        <div class="section-center">
+          <span class="eyebrow reveal">Proof of the Party</span>
+          <h2 class="section-title reveal delay-1" id="videos-h2">See the Fun <span class="g">For Yourself</span></h2>
+          <div class="neon-rule reveal delay-2" style="background: linear-gradient(to right, var(--gold), var(--magenta)); margin-bottom:0"></div>
+        </div>
+
+        <!--
+          TODO: Replace the YouTube embed URLs below with real MK Pub Entertainment videos.
+          Format:  https://www.youtube.com/embed/VIDEO_ID
+          Vimeo:   https://player.vimeo.com/video/VIDEO_ID
+          Change the `title` attribute on each iframe to match the actual video content.
+        -->
+        <div class="video-grid">
+
+          <div class="video-item reveal">
+            <div class="video-wrapper">
+              <iframe
+                src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                title="MK Pub Entertainment — Disco Bingo night highlights"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+                loading="lazy">
+              </iframe>
+            </div>
+            <p class="video-caption">Disco Bingo Night — Highlights</p>
+          </div>
+
+          <div class="video-item reveal delay-1">
+            <div class="video-wrapper">
+              <iframe
+                src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                title="MK Pub Entertainment — Karaoke Friday at The Crown"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+                loading="lazy">
+              </iframe>
+            </div>
+            <p class="video-caption">Karaoke Friday @ The Crown</p>
+          </div>
+
+          <div class="video-item reveal delay-2">
+            <div class="video-wrapper">
+              <iframe
+                src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                title="MK Pub Entertainment — Pub Quiz championship final"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+                loading="lazy">
+              </iframe>
+            </div>
+            <p class="video-caption">Pub Quiz Championship Final</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ── GALLERY / PHOTO STRIP ──────────────────────────────── -->
+    <section class="gallery" id="gallery" aria-labelledby="gallery-h2">
+      <div class="container">
+        <div class="section-center">
+          <span class="eyebrow reveal">The Atmosphere</span>
+          <h2 class="section-title reveal delay-1" id="gallery-h2">Nights to <span class="m">Remember</span></h2>
+          <div class="neon-rule reveal delay-2" style="margin-bottom:0"></div>
+        </div>
+      </div>
+
+      <!--
+        TODO: Replace the coloured placeholder blocks below with real venue photos.
+        Each block should become:
+          <div class="gallery-item">
+            <img src="/images/gallery/photo-name.webp"
+                 alt="Descriptive text about the photo — event type, venue name"
+                 width="310" height="210" loading="lazy">
+            <div class="gallery-caption">Caption text</div>
+          </div>
+        Use WebP at 310×210px. Both the first set AND the duplicate set below need real images.
+      -->
+
+      <div class="gallery-track-wrap reveal">
+        <div class="gallery-track" role="list" aria-label="Photo gallery — scrolls automatically">
+
+          <!-- First set (6 items) -->
+          <div class="gallery-item gi-1" role="listitem">
+            <div class="gallery-caption">Quiz Night @ The Crown</div>
+          </div>
+          <div class="gallery-item gi-2" role="listitem">
+            <div class="gallery-caption">Karaoke Friday</div>
+          </div>
+          <div class="gallery-item gi-3" role="listitem">
+            <div class="gallery-caption">Disco Bingo Madness</div>
+          </div>
+          <div class="gallery-item gi-4" role="listitem">
+            <div class="gallery-caption">Team Spirit @ The Bull</div>
+          </div>
+          <div class="gallery-item gi-5" role="listitem">
+            <div class="gallery-caption">Saturday Night Sing-Off</div>
+          </div>
+          <div class="gallery-item gi-6" role="listitem">
+            <div class="gallery-caption">Bingo Bonanza</div>
+          </div>
+
+          <!-- Duplicate set — required for seamless loop (aria-hidden so screen readers don't repeat) -->
+          <div class="gallery-item gi-1" role="listitem" aria-hidden="true"><div class="gallery-caption">Quiz Night @ The Crown</div></div>
+          <div class="gallery-item gi-2" role="listitem" aria-hidden="true"><div class="gallery-caption">Karaoke Friday</div></div>
+          <div class="gallery-item gi-3" role="listitem" aria-hidden="true"><div class="gallery-caption">Disco Bingo Madness</div></div>
+          <div class="gallery-item gi-4" role="listitem" aria-hidden="true"><div class="gallery-caption">Team Spirit @ The Bull</div></div>
+          <div class="gallery-item gi-5" role="listitem" aria-hidden="true"><div class="gallery-caption">Saturday Night Sing-Off</div></div>
+          <div class="gallery-item gi-6" role="listitem" aria-hidden="true"><div class="gallery-caption">Bingo Bonanza</div></div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ── TESTIMONIALS ────────────────────────────────────────── -->
+    <section class="testimonials" id="testimonials" aria-labelledby="testimonials-h2">
+      <div class="container">
+        <div class="section-center">
+          <span class="eyebrow reveal">What Venues Say</span>
+          <h2 class="section-title reveal delay-1" id="testimonials-h2">The Crowd <span class="g">Never Lies</span></h2>
+          <div class="neon-rule reveal delay-2" style="background: linear-gradient(to right, var(--gold), var(--magenta)); margin-bottom:0"></div>
+        </div>
+
+        <!--
+          TODO: Replace placeholder testimonials with real ones from actual customers.
+          Include: exact quote, first name, venue name and town.
+          Do not fabricate or paraphrase — use real words from real clients.
+        -->
+        <div class="testimonials-grid">
+
+          <article class="tcard reveal">
+            <div class="tcard-mark" aria-hidden="true">"</div>
+            <p class="tcard-body">We booked MK Pub Entertainment for a Disco Bingo night and the bar was absolutely packed. Our regulars are still talking about it weeks later — and we've already booked them again for next month.</p>
+            <p class="tcard-author">Sarah M.</p>
+            <p class="tcard-venue">Landlady, The Red Lion, Birmingham</p>
+          </article>
+
+          <article class="tcard reveal delay-1">
+            <div class="tcard-mark" aria-hidden="true">"</div>
+            <p class="tcard-body">The quiz nights have completely transformed our Thursdays. We went from a quiet evening to a full reservation list. The host is brilliant — funny, fast, and the rounds are genuinely clever.</p>
+            <p class="tcard-author">Tom H.</p>
+            <p class="tcard-venue">Manager, The Anchor Arms, Manchester</p>
+          </article>
+
+          <article class="tcard reveal delay-2">
+            <div class="tcard-mark" aria-hidden="true">"</div>
+            <p class="tcard-body">Karaoke night was an absolute riot. Professional setup, a host who handled everything brilliantly, and not a single person wanted to leave. Best Friday we've had in years. Already booked the Christmas special.</p>
+            <p class="tcard-author">Priya K.</p>
+            <p class="tcard-venue">Events Co-ordinator, The Swan, Leeds</p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ── BOOKING / CONTACT ───────────────────────────────────── -->
+    <section class="booking" id="booking" aria-labelledby="booking-h2">
+      <div class="container">
+        <div class="booking-grid">
+
+          <div class="booking-info reveal">
+            <span class="eyebrow">Get in Touch</span>
+            <h2 class="section-title" id="booking-h2">Ready to <span class="m">Book?</span></h2>
+            <p>Fill in the form and we'll be back in touch within 24 hours to discuss your event, availability, and pricing. We work with pubs and venues of all sizes across the UK.</p>
+
+            <!--
+              TODO: Replace placeholder contact details below with the real
+              MK Pub Entertainment email address and phone number.
+            -->
+            <div class="contact-row">
+              <div class="contact-icon" aria-hidden="true">✉</div>
+              <a href="mailto:placeholder@mkpubentertainment.co.uk">placeholder@mkpubentertainment.co.uk</a>
+            </div>
+            <div class="contact-row">
+              <div class="contact-icon" aria-hidden="true">☎</div>
+              <a href="tel:+447700000000">07700 000000</a>
+            </div>
+          </div>
+
+          <!--
+            TODO: Wire up this form to a submission service before going live.
+            Options:
+              • Formspree  — add action="https://formspree.io/f/YOUR_FORM_ID" method="POST" to <form>
+              • EmailJS    — call emailjs.sendForm() in the submit handler below
+              • Cloudflare Pages Functions — POST to /api/contact (create functions/contact.js)
+              • Netlify Forms — add the netlify attribute to <form>
+          -->
+          <form
+            class="booking-form reveal delay-1"
+            id="booking-form"
+            novalidate
+            aria-label="Booking enquiry form">
+
+            <div class="form-row-2">
+              <div class="fg">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="name" placeholder="Jane Smith" autocomplete="name" required>
+              </div>
+              <div class="fg">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="jane@example.com" autocomplete="email" required>
+              </div>
+            </div>
+
+            <div class="form-row-2">
+              <div class="fg">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="07700 000000" autocomplete="tel">
+              </div>
+              <div class="fg">
+                <label for="event-type">Event Type</label>
+                <select id="event-type" name="event_type" required>
+                  <option value="" disabled selected>Select an event…</option>
+                  <option value="pub-quiz">Pub Quiz</option>
+                  <option value="karaoke">Karaoke</option>
+                  <option value="disco-bingo">Disco Bingo</option>
+                  <option value="all-three">All Three!</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="fg">
+              <label for="message">Tell Us About Your Event</label>
+              <textarea id="message" name="message" placeholder="Venue name, expected attendance, date, any special requests…"></textarea>
+            </div>
+
+            <button type="submit" class="btn-primary btn-submit">Send Enquiry</button>
+            <p class="form-note">We typically respond within 24 hours. No spam, ever.</p>
+
+          </form>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ═══════════════════════════════════════════════════════════
+       FOOTER
+  ═══════════════════════════════════════════════════════════ -->
+  <footer role="contentinfo">
+    <div class="footer-inner">
+
+      <div class="footer-top">
+
+        <!-- Brand -->
+        <div>
+          <a href="#hero" class="footer-logo" aria-label="MK Pub Entertainment — back to top">
+            <div class="footer-logo-inner">
+              <svg width="100%" height="100%" viewBox="400 130 870 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                <g fill="#000000"><path d="M519.05 279.58 c-11.72 -1.28 -23.63 -4.52 -33.40 -9.16 -20.27 -9.59 -33.28 -26.74 -38.10 -50.19 -1.22 -5.80 -2.44 -17.16 -2.44 -23.02 l-0.06 -3.36 -2.08 4.09 c-4.27 8.24 -9.34 22.47 -11.66 32.54 -0.55 2.38 -0.92 6.78 -0.92 9.89 0.06 5.43 0 5.74 -1.71 7.63 -1.77 1.95 -1.95 2.01 -7.39 2.26 -6.23 0.18 -9.59 -0.79 -11.23 -3.30 -2.87 -4.40 -4.34 -16.67 -3.85 -32.06 0.24 -6.23 0.55 -11.97 0.79 -12.82 0.24 -0.85 0.24 -1.34 0 -1.10 -0.73 0.61 -4.46 13.37 -7.75 26.44 -2.56 10.14 -3.17 13.55 -3.54 20.21 -0.49 8.67 -1.22 10.87 -4.46 13.25 -4.15 3.11 -12.64 1.59 -15.94 -2.75 -4.52 -5.86 -7.20 -22.53 -7.39 -44.88 0 -7.51 -0.12 -13.62 -0.24 -13.62 -0.06 0 -1.16 0.67 -2.44 1.47 -7.27 4.58 -19.42 9.59 -29.80 12.21 -12.33 3.24 -20.94 4.15 -41.58 4.46 -25.34 0.43 -45.43 -0.92 -96.29 -6.53 -59.53 -6.53 -65.39 -6.96 -93.78 -6.96 -21.43 -0.06 -24.24 0.06 -32.18 1.34 -15.33 2.44 -22.16 4.95 -38.04 14.10 -9.16 5.25 -11.97 6.17 -19.17 6.17 -9.83 0 -13.43 -3.11 -13.49 -11.60 0 -6.04 1.04 -8.61 4.88 -12.52 5.56 -5.50 15.45 -9.46 29.12 -11.60 13.74 -2.20 66.74 -2.20 91.77 0 11.91 1.04 36.21 3.66 72.66 7.94 48.97 5.74 73.39 7.69 95.25 7.75 33.95 0.06 55.81 -6.47 72.72 -21.68 2.56 -2.32 3.17 -3.30 3.48 -5.37 0.67 -5.01 4.34 -6.96 12.46 -6.59 4.15 0.18 5.25 0.49 7.39 2.01 4.09 2.81 5.01 5.50 5.01 14.47 l0.06 7.57 2.44 -6.41 c4.88 -12.88 10.44 -22.59 14.78 -25.71 2.14 -1.59 2.93 -1.77 6.78 -1.77 3.60 0 4.76 0.24 6.53 1.47 3.97 2.75 6.04 9.40 6.04 19.90 l0 5.19 2.44 -4.09 c3.05 -5.13 7.88 -10.44 10.62 -11.72 3.05 -1.47 11.30 -1.34 14.29 0.18 4.70 2.44 7.45 6.96 8.61 14.10 0.37 2.20 0.92 10.01 1.28 17.40 0.43 8.91 0.98 15.14 1.77 18.62 4.88 21.61 16.67 35.11 35.96 41.15 9.22 2.87 15.63 3.66 30.04 3.60 30.28 -0.06 58.37 -5.31 82.61 -15.45 2.56 -1.04 4.70 -2.14 4.70 -2.44 0 -0.24 -1.47 -1.40 -3.17 -2.50 -5.25 -3.36 -15.02 -11.42 -21.49 -17.58 -17.16 -16.67 -27.35 -33.28 -31.99 -52.20 -1.53 -6.41 -1.47 -26.01 0.06 -31.20 2.93 -9.40 8.98 -16.97 16.42 -20.45 10.01 -4.70 25.95 -3.36 35.66 2.93 6.78 4.46 15.39 15.14 18.56 23.20 0.43 1.04 0.92 1.95 1.16 1.95 0.18 0 1.04 -1.28 1.89 -2.87 1.95 -3.66 7.63 -11.30 10.93 -14.71 6.17 -6.29 13.55 -10.75 20.88 -12.64 2.93 -0.79 5.86 -0.98 11.54 -0.79 6.96 0.18 7.94 0.37 11.30 1.95 7.33 3.60 12.88 11.36 15.33 21.43 1.34 5.37 1.53 21.68 0.31 28.39 -4.70 26.13 -24.55 53.12 -53.18 72.29 l-5.07 3.42 5.80 2.69 c24.79 11.48 57.39 17.46 77.48 14.17 19.72 -3.24 39.63 -13.68 57.46 -30.04 9.10 -8.43 19.05 -20.39 25.34 -30.47 l1.89 -3.05 0.31 -14.65 c0.49 -19.48 2.44 -33.34 7.14 -49.46 6.29 -21.80 17.04 -41.95 29.19 -54.71 5.98 -6.29 10.87 -10.01 16.97 -12.88 3.91 -1.83 4.70 -2.01 10.32 -2.01 5.13 0 6.53 0.24 8.61 1.34 3.48 1.83 6.59 5.50 8.24 9.71 2.01 5.07 2.01 18.07 0.06 26.01 -3.79 15.39 -14.78 36.70 -27.23 53 l-2.08 2.75 7.14 0 c6.90 0 7.27 0.06 10.14 1.83 2.20 1.34 3.48 2.75 4.70 5.13 1.53 2.93 1.71 3.85 1.71 9.52 0 9.89 -2.56 16.79 -9.52 25.40 -3.30 4.15 -10.50 10.38 -14.78 12.76 l-2.44 1.40 2.32 6.84 c5.68 16.42 12.82 29.37 18.32 33.28 1.65 1.16 1.95 1.22 3.48 0.37 4.64 -2.38 9.28 -8.49 19.72 -26.01 4.09 -6.90 9.04 -14.71 10.93 -17.40 12.39 -17.65 24.30 -25.71 42.13 -28.70 5.62 -0.98 9.22 -1.04 28.70 -0.73 21.92 0.37 33.22 0.98 81.57 4.70 78.64 6.04 109.05 6.11 132.25 0.31 9.16 -2.32 15.63 -5.19 27.41 -12.15 7.51 -4.46 12.03 -5.86 18.87 -5.86 10.56 0.06 15.02 4.64 13.86 14.29 -1.65 13.19 -18.07 21 -49.82 23.51 -26.74 2.14 -49.52 1.28 -112.65 -4.21 -80.60 -7.08 -91.83 -7.88 -114.48 -8.36 -18.87 -0.37 -23.39 0 -30.71 2.56 -10.44 3.60 -18.99 11.05 -27.54 24.12 -2.14 3.17 -6.84 10.87 -10.44 17.10 -9.10 15.51 -13.19 21.55 -18.26 26.62 -6.04 6.04 -8.85 7.27 -16.24 7.20 -6.59 0 -9.83 -0.98 -15.57 -4.40 -7.57 -4.58 -14.53 -13.01 -21.06 -25.52 -1.77 -3.30 -3.05 -5.37 -2.87 -4.52 0.18 0.85 0.55 5.37 0.79 10.07 0.37 7.45 0.24 8.85 -0.61 10.56 -1.59 3.11 -4.27 4.40 -9.10 4.40 -6.04 0 -10.26 -2.08 -12.33 -6.17 -1.16 -2.14 -3.05 -12.39 -4.58 -24.67 -0.67 -5.68 -1.34 -10.62 -1.40 -10.93 -0.12 -0.24 -1.77 1.65 -3.79 4.27 -4.34 5.80 -15.33 17.22 -21.68 22.53 -15.26 12.76 -34.07 21.86 -53.36 25.71 -9.40 1.89 -27.05 2.63 -37.92 1.53 -20.21 -2.01 -47.69 -10.38 -63.07 -19.11 l-3.24 -1.83 -7.75 3.48 c-19.54 8.85 -42.98 14.71 -67.84 17.10 -10.32 0.98 -36.57 1.10 -45.18 0.24z m132.43 -44.76 c8.61 -6.11 21.80 -18.81 27.78 -26.68 17.52 -23.26 23.08 -50.86 12.88 -64.23 -4.03 -5.31 -9.40 -6.66 -16.55 -4.15 -9.95 3.54 -18.62 12.27 -27.48 27.72 -2.26 3.91 -4.58 7.45 -5.19 7.75 -1.89 0.98 -5.80 0.73 -6.84 -0.43 -0.49 -0.61 -2.38 -3.85 -4.15 -7.20 -8.61 -16.18 -17.71 -25.89 -26.50 -28.39 -7.57 -2.08 -16.30 2.50 -20.15 10.56 -4.95 10.62 -3.24 24.85 5.13 41.64 8.61 17.34 24.18 34.38 43.47 47.63 l5.62 3.79 2.50 -1.53 c1.34 -0.85 5.62 -3.72 9.46 -6.47z m219.20 -48.66 c3.60 -4.15 6.47 -8.91 5.86 -9.52 -0.61 -0.61 -4.64 2.87 -7.02 6.11 -1.28 1.77 -3.30 4.82 -4.40 6.84 l-2.01 3.66 1.95 -1.47 c1.10 -0.73 3.60 -3.30 5.62 -5.62z m-12.39 -21.61 c13.80 -18.38 25.03 -40.79 28.21 -56.48 1.16 -5.68 1.83 -12.33 1.34 -13.55 -0.37 -1.04 -0.79 -0.79 -3.54 2.14 -8.91 9.40 -19.42 30.90 -25.52 52.08 -1.95 6.90 -3.91 14.90 -4.82 19.78 -0.43 2.44 -0.49 2.50 4.34 -3.97z"/></g>
+                <g fill="#ffffff"><path d="M562.40 277.51 c27.41 -2.63 55.50 -10.20 73.88 -19.97 l3.42 -1.77 3.72 2.20 c15.63 9.16 43.72 17.83 64.54 19.90 31.44 3.11 62.95 -6.66 87.62 -27.23 6.96 -5.80 18.07 -17.58 23.51 -24.91 2.63 -3.60 5.07 -6.53 5.31 -6.53 0.24 0 0.49 1.34 0.49 3.05 0 7.39 4.15 34.07 5.80 37.18 2.69 5.25 10.20 7.75 14.78 4.95 3.72 -2.26 4.09 -3.85 3.30 -14.29 -0.79 -10.62 -0.85 -18.68 -0.18 -18.68 0.24 0 1.34 2.38 2.50 5.37 4.15 10.69 10.75 21.31 17.16 27.60 6.96 6.96 14.23 10.50 21.37 10.56 5.37 0.06 8.91 -1.71 14.41 -7.14 5.07 -5.07 9.16 -11.11 18.26 -26.62 8.30 -14.29 13.31 -21.86 17.71 -26.87 8.24 -9.46 17.40 -14.71 29 -16.55 3.17 -0.49 10.44 -0.61 23.81 -0.37 24.24 0.49 33.89 1.16 116.31 8.36 54.40 4.76 77.79 5.92 98.49 4.88 27.96 -1.40 43.41 -4.95 53 -12.21 7.27 -5.50 9.46 -14.47 4.70 -19.05 -5.68 -5.43 -14.78 -4.64 -26.44 2.32 -11.78 6.96 -18.26 9.83 -27.41 12.15 -23.51 5.86 -56.30 5.80 -135.91 -0.31 -47.01 -3.60 -59.53 -4.34 -79.68 -4.70 -17.83 -0.31 -21.31 -0.24 -26.87 0.73 -17.89 2.99 -29.80 11.05 -42.19 28.70 -1.89 2.69 -6.84 10.50 -10.93 17.40 -12.76 21.43 -17.52 26.87 -23.39 26.87 -5.98 0 -14.78 -14.17 -22.16 -35.66 -1.47 -4.34 -2.69 -8.06 -2.69 -8.30 0 -0.31 1.47 -1.40 3.24 -2.44 14.65 -8.98 24.24 -23.32 24.24 -36.33 0 -9.04 -5.01 -14.41 -13.80 -14.84 -5.68 -0.31 -9.34 1.28 -14.78 6.23 -5.80 5.43 -12.46 16.24 -16.36 26.62 -2.14 5.74 -2.87 6.66 -2.44 3.05 0.18 -1.53 0.49 -5.07 0.73 -7.94 l0.37 -5.19 5.01 -5.50 c25.52 -28.03 41.34 -53.85 46.89 -76.51 1.89 -7.69 1.83 -17.40 -0.06 -22.35 -1.65 -4.21 -4.76 -7.88 -8.24 -9.71 -3.97 -2.08 -9.89 -1.83 -15.26 0.67 -18.81 8.79 -36.82 35.17 -46.16 67.59 -4.70 16.12 -6.66 29.98 -7.14 49.46 l-0.31 14.65 -1.89 3.05 c-11.54 18.56 -28.94 35.96 -46.83 46.71 -8.18 4.95 -13.49 7.39 -22.47 10.38 -11.05 3.66 -17.52 4.46 -31.75 4.09 -17.22 -0.43 -33.46 -3.54 -49.88 -9.52 -8.06 -2.99 -21.68 -9.10 -21.68 -9.77 0 -0.18 1.77 -1.40 3.97 -2.69 5.62 -3.36 14.96 -10.44 21.55 -16.24 18.56 -16.49 32.12 -38.83 35.60 -58.68 1.16 -6.47 0.98 -19.42 -0.31 -24.73 -2.44 -10.01 -8 -17.83 -15.33 -21.37 -3.05 -1.53 -4.52 -1.83 -9.46 -2.01 -6.84 -0.31 -11.54 0.73 -17.71 3.85 -9.52 4.76 -18.81 14.65 -24.97 26.50 -1.47 2.81 -2.81 4.82 -3.05 4.52 -0.24 -0.24 -1.10 -2.14 -1.83 -4.15 -3.79 -9.59 -11.85 -20.03 -19.17 -24.79 -6.72 -4.34 -16.30 -6.47 -24.18 -5.37 -11.30 1.59 -20.45 10.20 -24.24 22.84 -1.59 5.13 -1.65 21.31 -0.12 27.54 4.64 18.93 14.84 35.54 31.99 52.20 7.14 6.90 16.30 14.29 23.32 18.74 2.75 1.77 5.01 3.36 5.01 3.48 0 0.49 -7.94 3.91 -16.30 7.08 -21.43 8 -47.87 12.27 -76.51 12.39 -16.36 0 -22.29 -0.67 -31.87 -3.66 -19.29 -6.04 -31.08 -19.54 -35.96 -41.15 -0.79 -3.48 -1.34 -9.71 -1.77 -18.62 -0.92 -19.23 -1.95 -24.36 -5.98 -28.58 -3.42 -3.66 -9.46 -5.13 -13.80 -3.48 -4.58 1.71 -11.17 10.38 -15.33 20.21 -2.81 6.66 -3.72 8.06 -3.11 4.82 0.18 -1.16 0.55 -5.68 0.73 -10.07 0.61 -13.01 -1.22 -20.76 -5.80 -23.87 -3.05 -2.08 -6.47 -1.95 -9.65 0.31 -5.92 4.27 -13.74 20.15 -18.81 38.28 -2.81 9.83 -2.75 9.65 -2.99 9.34 -0.18 -0.12 0.06 -7.02 0.43 -15.26 0.67 -14.90 0.61 -15.02 -0.73 -17.77 -1.77 -3.79 -5.25 -6.11 -9.46 -6.47 -6.04 -0.49 -9.95 1.89 -10.56 6.53 -0.31 2.08 -0.92 3.05 -3.48 5.37 -9.89 8.85 -20.58 14.29 -35.23 17.89 -11.97 2.93 -21.43 3.85 -39.32 3.79 -23.57 0 -46.95 -1.89 -97.08 -7.75 -36.39 -4.27 -60.69 -6.90 -72.66 -7.94 -24.18 -2.14 -74.43 -2.14 -87.80 -0.06 -13.62 2.14 -23.69 6.04 -29.12 11.36 -3.66 3.60 -5.07 6.47 -5.07 10.81 0 6.17 4.40 9.95 11.54 9.95 5.31 0 8.73 -1.22 17.34 -6.17 15.88 -9.16 22.71 -11.66 38.04 -14.10 8 -1.28 10.62 -1.40 34.01 -1.34 30.41 0 35.29 0.37 95.62 6.96 50.07 5.50 71.32 6.96 94.52 6.53 18.56 -0.37 27.90 -1.40 39.69 -4.46 11.91 -3.05 24.12 -8.36 32.36 -13.98 2.32 -1.53 4.21 -2.75 4.34 -2.63 0.06 0.12 -0.12 2.69 -0.43 5.68 -1.34 13.43 1.16 41.09 4.70 50.92 2.08 5.98 7.14 9.77 11.78 8.91 4.40 -0.85 8.06 -6.78 7.20 -11.85 -0.49 -3.11 0.61 -9.89 3.66 -22.29 4.95 -19.90 11.36 -38.95 12.70 -37.61 0.12 0.18 -0.24 5.80 -0.92 12.52 -0.61 6.72 -1.10 15.08 -1.16 18.62 0 10.81 1.71 21.86 4.03 25.34 1.53 2.32 5.19 3.54 9.46 3.24 3.36 -0.24 3.97 -0.49 5.62 -2.32 1.59 -1.83 1.77 -2.26 1.40 -4.88 -0.55 -3.97 0.55 -11.17 3.05 -19.72 4.70 -16.30 13.31 -34.74 14.96 -32.12 0.31 0.49 0.55 2.81 0.55 5.13 0 6.47 1.16 17.65 2.44 23.93 4.82 23.45 17.83 40.60 38.10 50.19 9.77 4.64 21.68 7.88 33.40 9.16 8.49 0.85 31.32 0.73 41.52 -0.24z"/><path d="M632.74 241.30 c-13.19 -8.98 -26.07 -21.13 -34.86 -32.79 -6.23 -8.24 -12.88 -21.25 -15.14 -29.61 -1.89 -7.14 -2.63 -18.20 -1.47 -23.93 2.14 -11.05 8.98 -17.58 18.81 -18.07 5.50 -0.31 8.91 0.61 13.43 3.54 7.20 4.64 13.43 12.52 20.52 25.71 1.89 3.60 3.85 6.90 4.40 7.27 1.77 1.53 3.60 -0.24 7.88 -7.75 11.23 -19.66 22.77 -29 35.72 -29.12 3.79 0 5.07 0.24 7.33 1.47 3.30 1.83 6.17 5.50 8 10.20 2.08 5.37 2.32 17.22 0.55 25.83 -2.56 12.58 -8.12 24.48 -16.79 35.96 -4.76 6.23 -17.16 18.74 -23.20 23.39 -5.56 4.21 -17.46 12.09 -18.26 12.09 -0.43 0 -3.48 -1.89 -6.90 -4.15z"/><path d="M857.86 199.54 c0 -1.59 6.59 -14.23 9.40 -18.01 3.36 -4.58 7.33 -7.63 9.52 -7.39 1.28 0.18 1.53 0.55 1.71 2.44 0.24 2.93 -1.40 6.11 -5.92 11.30 -2.99 3.54 -12.39 11.66 -14.17 12.27 -0.31 0.12 -0.55 -0.12 -0.55 -0.61z"/><path d="M849.92 178.17 c0 -1.83 4.82 -23.57 6.72 -30.10 4.95 -17.40 12.39 -34.44 20.03 -45.85 4.09 -6.04 9.95 -12.03 11.54 -11.72 2.26 0.43 2.38 7.20 0.37 17.83 -2.56 13.98 -10.44 31.44 -21.86 48.60 -6.53 9.89 -16.79 22.84 -16.79 21.25z"/></g>
+              </svg>
+            </div>
+          </a>
+          <p class="footer-tagline">Your Night. Our Show.</p>
+
+          <nav aria-label="Social media">
+            <div class="footer-socials">
+              <!-- TODO: Replace href="#" with real social media profile URLs -->
+              <a href="#" class="social-btn" aria-label="MK Pub Entertainment on Facebook" rel="noopener noreferrer" target="_blank">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+              </a>
+              <a href="#" class="social-btn" aria-label="MK Pub Entertainment on Instagram" rel="noopener noreferrer" target="_blank">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+              </a>
+              <a href="#" class="social-btn" aria-label="MK Pub Entertainment on TikTok" rel="noopener noreferrer" target="_blank">
+                <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.31 6.31 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.34-6.34V8.69a8.18 8.18 0 0 0 4.78 1.52V6.74a4.85 4.85 0 0 1-1.02-.05z"/></svg>
+              </a>
+            </div>
+          </nav>
+        </div>
+
+        <!-- Nav links -->
+        <nav aria-label="Footer navigation">
+          <p class="footer-col-title">Navigate</p>
+          <ul class="footer-nav-list">
+            <li><a href="#what-we-do">What We Do</a></li>
+            <li><a href="#videos">Videos</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#booking">Book Now</a></li>
+          </ul>
+        </nav>
+
+        <!-- Contact / NAP -->
+        <!-- TODO: Replace placeholder contact info with real NAP details.
+             Must match Google Business Profile exactly for local SEO. -->
+        <address class="footer-addr">
+          <p class="footer-col-title">Contact</p>
+          <strong style="color:rgba(240,240,240,0.7); font-size:0.9rem;">MK Pub Entertainment</strong>
+          <a href="mailto:placeholder@mkpubentertainment.co.uk">placeholder@mkpubentertainment.co.uk</a>
+          <a href="tel:+447700000000">07700 000000</a>
+        </address>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copy">&copy; 2025 MK Pub Entertainment. All rights reserved.</p>
+      </div>
+
+    </div>
+  </footer>
+
+
+  <!-- ═══════════════════════════════════════════════════════════
+       JAVASCRIPT
+  ═══════════════════════════════════════════════════════════ -->
+  <script defer>
+
+    // ── HAMBURGER MENU ──────────────────────────────────────────
+    const hamburger  = document.getElementById('hamburger');
+    const navLinks   = document.getElementById('nav-links');
+
+    hamburger.addEventListener('click', () => {
+      const open = hamburger.classList.toggle('open');
+      navLinks.classList.toggle('open', open);
+      hamburger.setAttribute('aria-expanded', open);
+      document.body.style.overflow = open ? 'hidden' : '';
+    });
+
+    navLinks.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        hamburger.classList.remove('open');
+        navLinks.classList.remove('open');
+        hamburger.setAttribute('aria-expanded', 'false');
+        document.body.style.overflow = '';
+      });
+    });
+
+    // ── SCROLL REVEAL (IntersectionObserver) ─────────────────────
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -24px 0px' });
+
+    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+    // ── HERO PARTICLE SYSTEM ─────────────────────────────────────
+    (function () {
+      const canvas  = document.getElementById('particle-canvas');
+      const ctx     = canvas.getContext('2d');
+      const COLORS  = ['#e91e8c','#f5a623','#c71677','#ffd166','#b5179e','#ff85c2','#ffb347'];
+      const COUNT   = 90;
+      let W, H, particles, raf;
+
+      function rand(min, max) { return Math.random() * (max - min) + min; }
+
+      function makeParticle(full) {
+        return {
+          x:         rand(0, W || window.innerWidth),
+          y:         full ? rand(0, H || window.innerHeight) : (H || window.innerHeight) + rand(5, 30),
+          r:         rand(0.8, 3.2),
+          color:     COLORS[Math.floor(Math.random() * COLORS.length)],
+          vy:        -rand(0.25, 0.75),
+          vx:        rand(-0.2, 0.2),
+          alpha:     rand(0.25, 0.7),
+          wobble:    rand(0, Math.PI * 2),
+          wobbleSpd: rand(0.006, 0.024),
+          pulse:     rand(0, Math.PI * 2),
+          rotation:  rand(0, Math.PI * 2),
+          rotSpd:    rand(-0.03, 0.03),
+          isSquare:  Math.random() > 0.65,
+        };
+      }
+
+      function resize() {
+        W = canvas.width  = canvas.offsetWidth;
+        H = canvas.height = canvas.offsetHeight;
+      }
+
+      function init() {
+        resize();
+        particles = Array.from({ length: COUNT }, () => makeParticle(true));
+      }
+
+      function draw() {
+        ctx.clearRect(0, 0, W, H);
+
+        for (let p of particles) {
+          p.y        += p.vy;
+          p.x        += p.vx + Math.sin(p.wobble) * 0.22;
+          p.wobble   += p.wobbleSpd;
+          p.pulse    += 0.028;
+          p.rotation += p.rotSpd;
+
+          if (p.y < -12) Object.assign(p, makeParticle(false));
+
+          const a = p.alpha * (0.82 + Math.sin(p.pulse) * 0.18);
+
+          ctx.save();
+          ctx.globalAlpha = a;
+          ctx.fillStyle   = p.color;
+          ctx.translate(p.x, p.y);
+
+          if (p.isSquare) {
+            ctx.rotate(p.rotation);
+            ctx.fillRect(-p.r, -p.r, p.r * 2, p.r * 2);
+          } else {
+            ctx.beginPath();
+            ctx.arc(0, 0, p.r, 0, Math.PI * 2);
+            ctx.fill();
+          }
+
+          ctx.restore();
+        }
+
+        raf = requestAnimationFrame(draw);
+      }
+
+      // Pause animation when tab is hidden (saves CPU)
+      document.addEventListener('visibilitychange', () => {
+        if (document.hidden) { cancelAnimationFrame(raf); }
+        else { raf = requestAnimationFrame(draw); }
+      });
+
+      let resizeTimer;
+      window.addEventListener('resize', () => {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(resize, 120);
+      });
+
+      init();
+      draw();
+    })();
+
+    // ── CONTACT FORM (client-side placeholder) ───────────────────
+    //
+    // TODO: Connect this form to a real submission service before launch.
+    // See the HTML comment on the <form> element above for options.
+    //
+    document.getElementById('booking-form').addEventListener('submit', function (e) {
+      e.preventDefault();
+      const btn = this.querySelector('.btn-submit');
+      btn.textContent = 'Enquiry Sent \u2713';
+      btn.style.background = '#1a7a3a';
+      btn.style.boxShadow  = '0 4px 20px rgba(26,122,58,0.4)';
+      btn.disabled = true;
+    });
+
+  </script>
+
+</body>
+</html>
