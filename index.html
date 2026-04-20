@@ -98,7 +98,7 @@
        FONTS — display=swap handles font-display: swap via Google
   ═══════════════════════════════════════════════════════════ -->
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=Fredoka+One&display=swap');
   </style>
 
   <!-- ═══════════════════════════════════════════════════════════
@@ -285,6 +285,7 @@
       flex-direction: column;
       align-items: center;
       gap: 1.5rem;
+      padding-top: 3.5rem;
     }
 
     .hero-logo {
@@ -294,7 +295,7 @@
     .hero-logo svg { width: 100%; height: 100%; display: block; }
 
     .hero-brand-name {
-      font-family: 'Ravie', fantasy;
+      font-family: 'Ravie', 'Fredoka One', fantasy;
       font-size: clamp(2rem, 6vw, 3.8rem);
       letter-spacing: 0.05em;
       color: var(--off-white);
@@ -311,7 +312,7 @@
       margin-bottom: 1.25rem;
     }
     .hero-services span {
-      font-family: 'Ravie', fantasy;
+      font-family: 'Ravie', 'Fredoka One', fantasy;
       font-size: clamp(0.85rem, 2vw, 1rem);
       font-weight: 400;
       letter-spacing: 0.04em;
@@ -945,6 +946,14 @@
       .hamburger { display: flex; }
       .nav-logo-inner { width: 155px; height: 38px; }
 
+      /* Remove backdrop-filter so position:fixed children aren't trapped
+         inside the nav's stacking context (they'd only show 60px tall) */
+      .nav {
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+        background: rgba(10, 0, 22, 0.97);
+      }
+
       .nav-links {
         display: none;
         position: fixed;
@@ -955,6 +964,7 @@
         background: rgba(7, 0, 18, 0.97);
         padding: 3rem 2rem;
         overflow-y: auto;
+        z-index: 899;
       }
       .nav-links.open { display: flex; }
       .nav-links a { font-size: 1.2rem; }
@@ -1419,7 +1429,7 @@
       </div>
 
       <div class="footer-bottom">
-        <p class="footer-copy">&copy; 2025 MK Pub Entertainment. All rights reserved.</p>
+        <p class="footer-copy">&copy; 2026 MK Pub Entertainment. All rights reserved.</p>
       </div>
 
     </div>
