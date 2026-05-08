@@ -595,12 +595,14 @@
       display: flex;
       gap: 1.25rem;
       width: max-content;
-      animation: marquee 34s linear infinite;
+      animation: marquee 60s linear infinite;
     }
     .gallery-track:hover { animation-play-state: paused; }
 
     @keyframes marquee {
       from { transform: translateX(0); }
+      to   { transform: translateX(calc(-19 * 310px - 18 * 1.25rem)); }
+    }
       to   { transform: translateX(-50%); }
     }
 
@@ -612,6 +614,7 @@
       overflow: hidden;
       cursor: default;
     }
+    .gallery-item img { width: 100%; height: 100%; object-fit: cover; display: block; }
 
     /*
       TODO: Replace these gradient placeholders with real images:
@@ -621,13 +624,6 @@
       Use WebP at 310×210px, under 80KB each.
       Duplicate the set below for the seamless loop.
     */
-    .gi-1 { background: linear-gradient(145deg, #3b1260 0%, #e91e8c 100%); }
-    .gi-2 { background: linear-gradient(145deg, #0a2a5e 0%, #f5a623 100%); }
-    .gi-3 { background: linear-gradient(145deg, #5e1240 0%, #e91e8c 100%); }
-    .gi-4 { background: linear-gradient(145deg, #1a4a30 0%, #f5a623 100%); }
-    .gi-5 { background: linear-gradient(145deg, #3a0a5e 0%, #b5179e 100%); }
-    .gi-6 { background: linear-gradient(145deg, #5e2a0a 0%, #f5a623 100%); }
-
     .gallery-caption {
       position: absolute;
       bottom: 0; left: 0; right: 0;
@@ -1202,48 +1198,166 @@
         </div>
       </div>
 
-      <!--
-        TODO: Replace the coloured placeholder blocks below with real venue photos.
-        Each block should become:
-          <div class="gallery-item">
-            <img src="/images/gallery/photo-name.webp"
-                 alt="Descriptive text about the photo — event type, venue name"
-                 width="310" height="210" loading="lazy">
-            <div class="gallery-caption">Caption text</div>
-          </div>
-        Use WebP at 310×210px. Both the first set AND the duplicate set below need real images.
-      -->
+
 
       <div class="gallery-track-wrap reveal">
         <div class="gallery-track" role="list" aria-label="Photo gallery — scrolls automatically">
 
-          <!-- First set (6 items) -->
-          <div class="gallery-item gi-1" role="listitem">
-            <div class="gallery-caption">Quiz Night @ The Crown</div>
+          <!-- First set (19 real photos) -->
+          <div class="gallery-item" role="listitem">
+            <img src="/images/gallery/gallery-01.jpg" alt="Busy pub quiz night at a venue hosted by MK Pub Entertainment" width="310" height="210" loading="lazy">
+            <div class="gallery-caption">Quiz Night</div>
           </div>
-          <div class="gallery-item gi-2" role="listitem">
-            <div class="gallery-caption">Karaoke Friday</div>
+          <div class="gallery-item" role="listitem">
+            <img src="/images/gallery/gallery-02.jpg" alt="Quiz winners celebrating with cash prizes at an MK Pub Entertainment event" width="310" height="210" loading="lazy">
+            <div class="gallery-caption">Cash Prize Winners</div>
           </div>
-          <div class="gallery-item gi-3" role="listitem">
-            <div class="gallery-caption">Bop-Along Bingo Madness</div>
+          <div class="gallery-item" role="listitem">
+            <img src="/images/gallery/gallery-03.jpg" alt="MK Pub Entertainment host at a Keech Hospice charity quiz night" width="310" height="210" loading="lazy">
+            <div class="gallery-caption">Charity Quiz Night</div>
           </div>
-          <div class="gallery-item gi-4" role="listitem">
-            <div class="gallery-caption">Team Spirit @ The Bull</div>
+          <div class="gallery-item" role="listitem">
+            <img src="/images/gallery/gallery-04.jpg" alt="Winning team celebrating at an MK Pub Entertainment quiz night" width="310" height="210" loading="lazy">
+            <div class="gallery-caption">Team Winners</div>
           </div>
-          <div class="gallery-item gi-5" role="listitem">
-            <div class="gallery-caption">Saturday Night Sing-Off</div>
+          <div class="gallery-item" role="listitem">
+            <img src="/images/gallery/gallery-05.jpg" alt="Packed pub quiz night hosted by MK Pub Entertainment" width="310" height="210" loading="lazy">
+            <div class="gallery-caption">A Packed House</div>
           </div>
-          <div class="gallery-item gi-6" role="listitem">
-            <div class="gallery-caption">Bingo Bonanza</div>
+          <div class="gallery-item" role="listitem">
+            <img src="/images/gallery/gallery-06.jpg" alt="Pub quiz night fun hosted by MK Pub Entertainment" width="310" height="210" loading="lazy">
+            <div class="gallery-caption">Quiz Night Fun</div>
+          </div>
+          <div class="gallery-item" role="listitem">
+            <img src="/images/gallery/gallery-07.jpg" alt="Lively atmosphere at an MK Pub Entertainment event" width="310" height="210" loading="lazy">
+            <div class="gallery-caption">The Atmosphere</div>
+          </div>
+          <div class="gallery-item" role="listitem">
+            <img src="/images/gallery/gallery-08.jpg" alt="Winners celebrating at an MK Pub Entertainment quiz night" width="310" height="210" loading="lazy">
+            <div class="gallery-caption">Winners on the Night</div>
+          </div>
+          <div class="gallery-item" role="listitem">
+            <img src="/images/gallery/gallery-09.jpg" alt="Guests enjoying a Friday night quiz hosted by MK Pub Entertainment" width="310" height="210" loading="lazy">
+            <div class="gallery-caption">Friday Night Laughs</div>
+          </div>
+          <div class="gallery-item" role="listitem">
+            <img src="/images/gallery/gallery-10.jpg" alt="Pub quiz madness with MK Pub Entertainment" width="310" height="210" loading="lazy">
+            <div class="gallery-caption">Pub Quiz Madness</div>
+          </div>
+          <div class="gallery-item" role="listitem">
+            <img src="/images/gallery/gallery-11.jpg" alt="Live bingo night hosted by MK Pub Entertainment" width="310" height="210" loading="lazy">
+            <div class="gallery-caption">Live Bingo Night</div>
+          </div>
+          <div class="gallery-item" role="listitem">
+            <img src="/images/gallery/gallery-12.jpg" alt="Crowd favourites at an MK Pub Entertainment event" width="310" height="210" loading="lazy">
+            <div class="gallery-caption">Crowd Favourites</div>
+          </div>
+          <div class="gallery-item" role="listitem">
+            <img src="/images/gallery/gallery-13.jpg" alt="Saturday night quiz hosted by MK Pub Entertainment" width="310" height="210" loading="lazy">
+            <div class="gallery-caption">Saturday Night Quiz</div>
+          </div>
+          <div class="gallery-item" role="listitem">
+            <img src="/images/gallery/gallery-14.jpg" alt="The winning table at an MK Pub Entertainment quiz night" width="310" height="210" loading="lazy">
+            <div class="gallery-caption">The Winning Table</div>
+          </div>
+          <div class="gallery-item" role="listitem">
+            <img src="/images/gallery/gallery-15.jpg" alt="Big prize winners at an MK Pub Entertainment event" width="310" height="210" loading="lazy">
+            <div class="gallery-caption">Big Prizes, Big Smiles</div>
+          </div>
+          <div class="gallery-item" role="listitem">
+            <img src="/images/gallery/gallery-16.jpg" alt="Event highlights from an MK Pub Entertainment night" width="310" height="210" loading="lazy">
+            <div class="gallery-caption">Event Highlights</div>
+          </div>
+          <div class="gallery-item" role="listitem">
+            <img src="/images/gallery/gallery-17.jpg" alt="Full house at an MK Pub Entertainment pub quiz" width="310" height="210" loading="lazy">
+            <div class="gallery-caption">Full House Tonight</div>
+          </div>
+          <div class="gallery-item" role="listitem">
+            <img src="/images/gallery/gallery-18.jpg" alt="The quiz master hosting an MK Pub Entertainment event" width="310" height="210" loading="lazy">
+            <div class="gallery-caption">The Quiz Master</div>
+          </div>
+          <div class="gallery-item" role="listitem">
+            <img src="/images/gallery/gallery-19.jpg" alt="Unforgettable nights with MK Pub Entertainment" width="310" height="210" loading="lazy">
+            <div class="gallery-caption">Unforgettable Nights</div>
           </div>
 
           <!-- Duplicate set — required for seamless loop (aria-hidden so screen readers don't repeat) -->
-          <div class="gallery-item gi-1" role="listitem" aria-hidden="true"><div class="gallery-caption">Quiz Night @ The Crown</div></div>
-          <div class="gallery-item gi-2" role="listitem" aria-hidden="true"><div class="gallery-caption">Karaoke Friday</div></div>
-          <div class="gallery-item gi-3" role="listitem" aria-hidden="true"><div class="gallery-caption">Bop-Along Bingo Madness</div></div>
-          <div class="gallery-item gi-4" role="listitem" aria-hidden="true"><div class="gallery-caption">Team Spirit @ The Bull</div></div>
-          <div class="gallery-item gi-5" role="listitem" aria-hidden="true"><div class="gallery-caption">Saturday Night Sing-Off</div></div>
-          <div class="gallery-item gi-6" role="listitem" aria-hidden="true"><div class="gallery-caption">Bingo Bonanza</div></div>
+          <div class="gallery-item" role="listitem" aria-hidden="true">
+            <img src="/images/gallery/gallery-01.jpg" alt="Busy pub quiz night at a venue hosted by MK Pub Entertainment" width="310" height="210" loading="lazy">
+            <div class="gallery-caption">Quiz Night</div>
+          </div>
+          <div class="gallery-item" role="listitem" aria-hidden="true">
+            <img src="/images/gallery/gallery-02.jpg" alt="Quiz winners celebrating with cash prizes at an MK Pub Entertainment event" width="310" height="210" loading="lazy">
+            <div class="gallery-caption">Cash Prize Winners</div>
+          </div>
+          <div class="gallery-item" role="listitem" aria-hidden="true">
+            <img src="/images/gallery/gallery-03.jpg" alt="MK Pub Entertainment host at a Keech Hospice charity quiz night" width="310" height="210" loading="lazy">
+            <div class="gallery-caption">Charity Quiz Night</div>
+          </div>
+          <div class="gallery-item" role="listitem" aria-hidden="true">
+            <img src="/images/gallery/gallery-04.jpg" alt="Winning team celebrating at an MK Pub Entertainment quiz night" width="310" height="210" loading="lazy">
+            <div class="gallery-caption">Team Winners</div>
+          </div>
+          <div class="gallery-item" role="listitem" aria-hidden="true">
+            <img src="/images/gallery/gallery-05.jpg" alt="Packed pub quiz night hosted by MK Pub Entertainment" width="310" height="210" loading="lazy">
+            <div class="gallery-caption">A Packed House</div>
+          </div>
+          <div class="gallery-item" role="listitem" aria-hidden="true">
+            <img src="/images/gallery/gallery-06.jpg" alt="Pub quiz night fun hosted by MK Pub Entertainment" width="310" height="210" loading="lazy">
+            <div class="gallery-caption">Quiz Night Fun</div>
+          </div>
+          <div class="gallery-item" role="listitem" aria-hidden="true">
+            <img src="/images/gallery/gallery-07.jpg" alt="Lively atmosphere at an MK Pub Entertainment event" width="310" height="210" loading="lazy">
+            <div class="gallery-caption">The Atmosphere</div>
+          </div>
+          <div class="gallery-item" role="listitem" aria-hidden="true">
+            <img src="/images/gallery/gallery-08.jpg" alt="Winners celebrating at an MK Pub Entertainment quiz night" width="310" height="210" loading="lazy">
+            <div class="gallery-caption">Winners on the Night</div>
+          </div>
+          <div class="gallery-item" role="listitem" aria-hidden="true">
+            <img src="/images/gallery/gallery-09.jpg" alt="Guests enjoying a Friday night quiz hosted by MK Pub Entertainment" width="310" height="210" loading="lazy">
+            <div class="gallery-caption">Friday Night Laughs</div>
+          </div>
+          <div class="gallery-item" role="listitem" aria-hidden="true">
+            <img src="/images/gallery/gallery-10.jpg" alt="Pub quiz madness with MK Pub Entertainment" width="310" height="210" loading="lazy">
+            <div class="gallery-caption">Pub Quiz Madness</div>
+          </div>
+          <div class="gallery-item" role="listitem" aria-hidden="true">
+            <img src="/images/gallery/gallery-11.jpg" alt="Live bingo night hosted by MK Pub Entertainment" width="310" height="210" loading="lazy">
+            <div class="gallery-caption">Live Bingo Night</div>
+          </div>
+          <div class="gallery-item" role="listitem" aria-hidden="true">
+            <img src="/images/gallery/gallery-12.jpg" alt="Crowd favourites at an MK Pub Entertainment event" width="310" height="210" loading="lazy">
+            <div class="gallery-caption">Crowd Favourites</div>
+          </div>
+          <div class="gallery-item" role="listitem" aria-hidden="true">
+            <img src="/images/gallery/gallery-13.jpg" alt="Saturday night quiz hosted by MK Pub Entertainment" width="310" height="210" loading="lazy">
+            <div class="gallery-caption">Saturday Night Quiz</div>
+          </div>
+          <div class="gallery-item" role="listitem" aria-hidden="true">
+            <img src="/images/gallery/gallery-14.jpg" alt="The winning table at an MK Pub Entertainment quiz night" width="310" height="210" loading="lazy">
+            <div class="gallery-caption">The Winning Table</div>
+          </div>
+          <div class="gallery-item" role="listitem" aria-hidden="true">
+            <img src="/images/gallery/gallery-15.jpg" alt="Big prize winners at an MK Pub Entertainment event" width="310" height="210" loading="lazy">
+            <div class="gallery-caption">Big Prizes, Big Smiles</div>
+          </div>
+          <div class="gallery-item" role="listitem" aria-hidden="true">
+            <img src="/images/gallery/gallery-16.jpg" alt="Event highlights from an MK Pub Entertainment night" width="310" height="210" loading="lazy">
+            <div class="gallery-caption">Event Highlights</div>
+          </div>
+          <div class="gallery-item" role="listitem" aria-hidden="true">
+            <img src="/images/gallery/gallery-17.jpg" alt="Full house at an MK Pub Entertainment pub quiz" width="310" height="210" loading="lazy">
+            <div class="gallery-caption">Full House Tonight</div>
+          </div>
+          <div class="gallery-item" role="listitem" aria-hidden="true">
+            <img src="/images/gallery/gallery-18.jpg" alt="The quiz master hosting an MK Pub Entertainment event" width="310" height="210" loading="lazy">
+            <div class="gallery-caption">The Quiz Master</div>
+          </div>
+          <div class="gallery-item" role="listitem" aria-hidden="true">
+            <img src="/images/gallery/gallery-19.jpg" alt="Unforgettable nights with MK Pub Entertainment" width="310" height="210" loading="lazy">
+            <div class="gallery-caption">Unforgettable Nights</div>
+          </div>
 
         </div>
       </div>
