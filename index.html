@@ -593,32 +593,110 @@
 
     .gallery-track {
       display: flex;
-      gap: 0.75rem;
+      gap: 1.25rem;
       width: max-content;
-      animation: marquee 50s linear infinite;
+      animation: marquee 60s linear infinite;
     }
     .gallery-track:hover { animation-play-state: paused; }
 
     @keyframes marquee {
       from { transform: translateX(0); }
-      to   { transform: translateX(calc(-19 * 155px - 18 * 0.75rem)); }
+      to   { transform: translateX(calc(-19 * 310px - 18 * 1.25rem)); }
     }
 
     .gallery-item {
-      flex: 0 0 155px;
-      height: 105px;
-      border-radius: 8px;
+      flex: 0 0 310px;
+      height: 210px;
+      border-radius: 10px;
       position: relative;
       overflow: hidden;
-      cursor: default;
+      cursor: pointer;
     }
-    .gallery-item img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .gallery-item img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.35s ease; }
+    .gallery-item:hover img { transform: scale(1.06); }
+
+    /* ── LIGHTBOX ──────────────────────────────────────────── */
+    .lightbox {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: rgba(10,4,20,0.92);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+    }
+    .lightbox.open { display: flex; }
+    .lightbox-img {
+      max-width: min(90vw, 1100px);
+      max-height: 85vh;
+      border-radius: 10px;
+      box-shadow: 0 24px 80px rgba(0,0,0,0.7);
+      object-fit: contain;
+      animation: lb-in 0.25s ease;
+    }
+    @keyframes lb-in {
+      from { opacity: 0; transform: scale(0.94); }
+      to   { opacity: 1; transform: scale(1); }
+    }
+    .lightbox-close {
+      position: fixed;
+      top: 1.25rem;
+      right: 1.5rem;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.25);
+      color: #fff;
+      font-size: 1.4rem;
+      line-height: 1;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.2s;
+    }
+    .lightbox-close:hover { background: rgba(233,30,140,0.5); }
+    .lightbox-nav {
+      position: fixed;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.25);
+      color: #fff;
+      font-size: 1.5rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.2s;
+      user-select: none;
+    }
+    .lightbox-nav:hover { background: rgba(233,30,140,0.5); }
+    .lightbox-prev { left: 1.25rem; }
+    .lightbox-next { right: 1.25rem; }
+    .lightbox-counter {
+      position: fixed;
+      bottom: 1.25rem;
+      left: 50%;
+      transform: translateX(-50%);
+      color: rgba(255,255,255,0.6);
+      font-family: var(--font-body);
+      font-size: 0.85rem;
+      letter-spacing: 0.08em;
+    }
 
     /*
       TODO: Replace these gradient placeholders with real images:
         <img src="/images/gallery/quiz-night-the-crown.webp"
              alt="Pub quiz night at The Crown"
-             width="155" height="105" loading="lazy">
+             width="310" height="210" loading="lazy">
       Use WebP at 310×210px, under 80KB each.
       Duplicate the set below for the seamless loop.
     */
@@ -1203,157 +1281,157 @@
 
           <!-- First set (19 real photos) -->
           <div class="gallery-item" role="listitem">
-            <img src="/images/gallery/gallery-01.jpg" alt="Busy pub quiz night at a venue hosted by MK Pub Entertainment" width="155" height="105" loading="lazy">
+            <img src="/images/gallery/gallery-01.jpg" alt="Busy pub quiz night at a venue hosted by MK Pub Entertainment" width="310" height="210" loading="lazy">
             <div class="gallery-caption">Quiz Night</div>
           </div>
           <div class="gallery-item" role="listitem">
-            <img src="/images/gallery/gallery-02.jpg" alt="Quiz winners celebrating with cash prizes at an MK Pub Entertainment event" width="155" height="105" loading="lazy">
+            <img src="/images/gallery/gallery-02.jpg" alt="Quiz winners celebrating with cash prizes at an MK Pub Entertainment event" width="310" height="210" loading="lazy">
             <div class="gallery-caption">Cash Prize Winners</div>
           </div>
           <div class="gallery-item" role="listitem">
-            <img src="/images/gallery/gallery-03.jpg" alt="MK Pub Entertainment host at a Keech Hospice charity quiz night" width="155" height="105" loading="lazy">
+            <img src="/images/gallery/gallery-03.jpg" alt="MK Pub Entertainment host at a Keech Hospice charity quiz night" width="310" height="210" loading="lazy">
             <div class="gallery-caption">Charity Quiz Night</div>
           </div>
           <div class="gallery-item" role="listitem">
-            <img src="/images/gallery/gallery-04.jpg" alt="Winning team celebrating at an MK Pub Entertainment quiz night" width="155" height="105" loading="lazy">
+            <img src="/images/gallery/gallery-04.jpg" alt="Winning team celebrating at an MK Pub Entertainment quiz night" width="310" height="210" loading="lazy">
             <div class="gallery-caption">Team Winners</div>
           </div>
           <div class="gallery-item" role="listitem">
-            <img src="/images/gallery/gallery-05.jpg" alt="Packed pub quiz night hosted by MK Pub Entertainment" width="155" height="105" loading="lazy">
+            <img src="/images/gallery/gallery-05.jpg" alt="Packed pub quiz night hosted by MK Pub Entertainment" width="310" height="210" loading="lazy">
             <div class="gallery-caption">A Packed House</div>
           </div>
           <div class="gallery-item" role="listitem">
-            <img src="/images/gallery/gallery-06.jpg" alt="Pub quiz night fun hosted by MK Pub Entertainment" width="155" height="105" loading="lazy">
+            <img src="/images/gallery/gallery-06.jpg" alt="Pub quiz night fun hosted by MK Pub Entertainment" width="310" height="210" loading="lazy">
             <div class="gallery-caption">Quiz Night Fun</div>
           </div>
           <div class="gallery-item" role="listitem">
-            <img src="/images/gallery/gallery-07.jpg" alt="Lively atmosphere at an MK Pub Entertainment event" width="155" height="105" loading="lazy">
+            <img src="/images/gallery/gallery-07.jpg" alt="Lively atmosphere at an MK Pub Entertainment event" width="310" height="210" loading="lazy">
             <div class="gallery-caption">The Atmosphere</div>
           </div>
           <div class="gallery-item" role="listitem">
-            <img src="/images/gallery/gallery-08.jpg" alt="Winners celebrating at an MK Pub Entertainment quiz night" width="155" height="105" loading="lazy">
+            <img src="/images/gallery/gallery-08.jpg" alt="Winners celebrating at an MK Pub Entertainment quiz night" width="310" height="210" loading="lazy">
             <div class="gallery-caption">Winners on the Night</div>
           </div>
           <div class="gallery-item" role="listitem">
-            <img src="/images/gallery/gallery-09.jpg" alt="Guests enjoying a Friday night quiz hosted by MK Pub Entertainment" width="155" height="105" loading="lazy">
+            <img src="/images/gallery/gallery-09.jpg" alt="Guests enjoying a Friday night quiz hosted by MK Pub Entertainment" width="310" height="210" loading="lazy">
             <div class="gallery-caption">Friday Night Laughs</div>
           </div>
           <div class="gallery-item" role="listitem">
-            <img src="/images/gallery/gallery-10.jpg" alt="Pub quiz madness with MK Pub Entertainment" width="155" height="105" loading="lazy">
+            <img src="/images/gallery/gallery-10.jpg" alt="Pub quiz madness with MK Pub Entertainment" width="310" height="210" loading="lazy">
             <div class="gallery-caption">Pub Quiz Madness</div>
           </div>
           <div class="gallery-item" role="listitem">
-            <img src="/images/gallery/gallery-11.jpg" alt="Live bingo night hosted by MK Pub Entertainment" width="155" height="105" loading="lazy">
+            <img src="/images/gallery/gallery-11.jpg" alt="Live bingo night hosted by MK Pub Entertainment" width="310" height="210" loading="lazy">
             <div class="gallery-caption">Live Bingo Night</div>
           </div>
           <div class="gallery-item" role="listitem">
-            <img src="/images/gallery/gallery-12.jpg" alt="Crowd favourites at an MK Pub Entertainment event" width="155" height="105" loading="lazy">
+            <img src="/images/gallery/gallery-12.jpg" alt="Crowd favourites at an MK Pub Entertainment event" width="310" height="210" loading="lazy">
             <div class="gallery-caption">Crowd Favourites</div>
           </div>
           <div class="gallery-item" role="listitem">
-            <img src="/images/gallery/gallery-13.jpg" alt="Saturday night quiz hosted by MK Pub Entertainment" width="155" height="105" loading="lazy">
+            <img src="/images/gallery/gallery-13.jpg" alt="Saturday night quiz hosted by MK Pub Entertainment" width="310" height="210" loading="lazy">
             <div class="gallery-caption">Saturday Night Quiz</div>
           </div>
           <div class="gallery-item" role="listitem">
-            <img src="/images/gallery/gallery-14.jpg" alt="The winning table at an MK Pub Entertainment quiz night" width="155" height="105" loading="lazy">
+            <img src="/images/gallery/gallery-14.jpg" alt="The winning table at an MK Pub Entertainment quiz night" width="310" height="210" loading="lazy">
             <div class="gallery-caption">The Winning Table</div>
           </div>
           <div class="gallery-item" role="listitem">
-            <img src="/images/gallery/gallery-15.jpg" alt="Big prize winners at an MK Pub Entertainment event" width="155" height="105" loading="lazy">
+            <img src="/images/gallery/gallery-15.jpg" alt="Big prize winners at an MK Pub Entertainment event" width="310" height="210" loading="lazy">
             <div class="gallery-caption">Big Prizes, Big Smiles</div>
           </div>
           <div class="gallery-item" role="listitem">
-            <img src="/images/gallery/gallery-16.jpg" alt="Event highlights from an MK Pub Entertainment night" width="155" height="105" loading="lazy">
+            <img src="/images/gallery/gallery-16.jpg" alt="Event highlights from an MK Pub Entertainment night" width="310" height="210" loading="lazy">
             <div class="gallery-caption">Event Highlights</div>
           </div>
           <div class="gallery-item" role="listitem">
-            <img src="/images/gallery/gallery-17.jpg" alt="Full house at an MK Pub Entertainment pub quiz" width="155" height="105" loading="lazy">
+            <img src="/images/gallery/gallery-17.jpg" alt="Full house at an MK Pub Entertainment pub quiz" width="310" height="210" loading="lazy">
             <div class="gallery-caption">Full House Tonight</div>
           </div>
           <div class="gallery-item" role="listitem">
-            <img src="/images/gallery/gallery-18.jpg" alt="The quiz master hosting an MK Pub Entertainment event" width="155" height="105" loading="lazy">
+            <img src="/images/gallery/gallery-18.jpg" alt="The quiz master hosting an MK Pub Entertainment event" width="310" height="210" loading="lazy">
             <div class="gallery-caption">The Quiz Master</div>
           </div>
           <div class="gallery-item" role="listitem">
-            <img src="/images/gallery/gallery-19.jpg" alt="Unforgettable nights with MK Pub Entertainment" width="155" height="105" loading="lazy">
+            <img src="/images/gallery/gallery-19.jpg" alt="Unforgettable nights with MK Pub Entertainment" width="310" height="210" loading="lazy">
             <div class="gallery-caption">Unforgettable Nights</div>
           </div>
 
           <!-- Duplicate set — required for seamless loop (aria-hidden so screen readers don't repeat) -->
           <div class="gallery-item" role="listitem" aria-hidden="true">
-            <img src="/images/gallery/gallery-01.jpg" alt="Busy pub quiz night at a venue hosted by MK Pub Entertainment" width="155" height="105" loading="lazy">
+            <img src="/images/gallery/gallery-01.jpg" alt="Busy pub quiz night at a venue hosted by MK Pub Entertainment" width="310" height="210" loading="lazy">
             <div class="gallery-caption">Quiz Night</div>
           </div>
           <div class="gallery-item" role="listitem" aria-hidden="true">
-            <img src="/images/gallery/gallery-02.jpg" alt="Quiz winners celebrating with cash prizes at an MK Pub Entertainment event" width="155" height="105" loading="lazy">
+            <img src="/images/gallery/gallery-02.jpg" alt="Quiz winners celebrating with cash prizes at an MK Pub Entertainment event" width="310" height="210" loading="lazy">
             <div class="gallery-caption">Cash Prize Winners</div>
           </div>
           <div class="gallery-item" role="listitem" aria-hidden="true">
-            <img src="/images/gallery/gallery-03.jpg" alt="MK Pub Entertainment host at a Keech Hospice charity quiz night" width="155" height="105" loading="lazy">
+            <img src="/images/gallery/gallery-03.jpg" alt="MK Pub Entertainment host at a Keech Hospice charity quiz night" width="310" height="210" loading="lazy">
             <div class="gallery-caption">Charity Quiz Night</div>
           </div>
           <div class="gallery-item" role="listitem" aria-hidden="true">
-            <img src="/images/gallery/gallery-04.jpg" alt="Winning team celebrating at an MK Pub Entertainment quiz night" width="155" height="105" loading="lazy">
+            <img src="/images/gallery/gallery-04.jpg" alt="Winning team celebrating at an MK Pub Entertainment quiz night" width="310" height="210" loading="lazy">
             <div class="gallery-caption">Team Winners</div>
           </div>
           <div class="gallery-item" role="listitem" aria-hidden="true">
-            <img src="/images/gallery/gallery-05.jpg" alt="Packed pub quiz night hosted by MK Pub Entertainment" width="155" height="105" loading="lazy">
+            <img src="/images/gallery/gallery-05.jpg" alt="Packed pub quiz night hosted by MK Pub Entertainment" width="310" height="210" loading="lazy">
             <div class="gallery-caption">A Packed House</div>
           </div>
           <div class="gallery-item" role="listitem" aria-hidden="true">
-            <img src="/images/gallery/gallery-06.jpg" alt="Pub quiz night fun hosted by MK Pub Entertainment" width="155" height="105" loading="lazy">
+            <img src="/images/gallery/gallery-06.jpg" alt="Pub quiz night fun hosted by MK Pub Entertainment" width="310" height="210" loading="lazy">
             <div class="gallery-caption">Quiz Night Fun</div>
           </div>
           <div class="gallery-item" role="listitem" aria-hidden="true">
-            <img src="/images/gallery/gallery-07.jpg" alt="Lively atmosphere at an MK Pub Entertainment event" width="155" height="105" loading="lazy">
+            <img src="/images/gallery/gallery-07.jpg" alt="Lively atmosphere at an MK Pub Entertainment event" width="310" height="210" loading="lazy">
             <div class="gallery-caption">The Atmosphere</div>
           </div>
           <div class="gallery-item" role="listitem" aria-hidden="true">
-            <img src="/images/gallery/gallery-08.jpg" alt="Winners celebrating at an MK Pub Entertainment quiz night" width="155" height="105" loading="lazy">
+            <img src="/images/gallery/gallery-08.jpg" alt="Winners celebrating at an MK Pub Entertainment quiz night" width="310" height="210" loading="lazy">
             <div class="gallery-caption">Winners on the Night</div>
           </div>
           <div class="gallery-item" role="listitem" aria-hidden="true">
-            <img src="/images/gallery/gallery-09.jpg" alt="Guests enjoying a Friday night quiz hosted by MK Pub Entertainment" width="155" height="105" loading="lazy">
+            <img src="/images/gallery/gallery-09.jpg" alt="Guests enjoying a Friday night quiz hosted by MK Pub Entertainment" width="310" height="210" loading="lazy">
             <div class="gallery-caption">Friday Night Laughs</div>
           </div>
           <div class="gallery-item" role="listitem" aria-hidden="true">
-            <img src="/images/gallery/gallery-10.jpg" alt="Pub quiz madness with MK Pub Entertainment" width="155" height="105" loading="lazy">
+            <img src="/images/gallery/gallery-10.jpg" alt="Pub quiz madness with MK Pub Entertainment" width="310" height="210" loading="lazy">
             <div class="gallery-caption">Pub Quiz Madness</div>
           </div>
           <div class="gallery-item" role="listitem" aria-hidden="true">
-            <img src="/images/gallery/gallery-11.jpg" alt="Live bingo night hosted by MK Pub Entertainment" width="155" height="105" loading="lazy">
+            <img src="/images/gallery/gallery-11.jpg" alt="Live bingo night hosted by MK Pub Entertainment" width="310" height="210" loading="lazy">
             <div class="gallery-caption">Live Bingo Night</div>
           </div>
           <div class="gallery-item" role="listitem" aria-hidden="true">
-            <img src="/images/gallery/gallery-12.jpg" alt="Crowd favourites at an MK Pub Entertainment event" width="155" height="105" loading="lazy">
+            <img src="/images/gallery/gallery-12.jpg" alt="Crowd favourites at an MK Pub Entertainment event" width="310" height="210" loading="lazy">
             <div class="gallery-caption">Crowd Favourites</div>
           </div>
           <div class="gallery-item" role="listitem" aria-hidden="true">
-            <img src="/images/gallery/gallery-13.jpg" alt="Saturday night quiz hosted by MK Pub Entertainment" width="155" height="105" loading="lazy">
+            <img src="/images/gallery/gallery-13.jpg" alt="Saturday night quiz hosted by MK Pub Entertainment" width="310" height="210" loading="lazy">
             <div class="gallery-caption">Saturday Night Quiz</div>
           </div>
           <div class="gallery-item" role="listitem" aria-hidden="true">
-            <img src="/images/gallery/gallery-14.jpg" alt="The winning table at an MK Pub Entertainment quiz night" width="155" height="105" loading="lazy">
+            <img src="/images/gallery/gallery-14.jpg" alt="The winning table at an MK Pub Entertainment quiz night" width="310" height="210" loading="lazy">
             <div class="gallery-caption">The Winning Table</div>
           </div>
           <div class="gallery-item" role="listitem" aria-hidden="true">
-            <img src="/images/gallery/gallery-15.jpg" alt="Big prize winners at an MK Pub Entertainment event" width="155" height="105" loading="lazy">
+            <img src="/images/gallery/gallery-15.jpg" alt="Big prize winners at an MK Pub Entertainment event" width="310" height="210" loading="lazy">
             <div class="gallery-caption">Big Prizes, Big Smiles</div>
           </div>
           <div class="gallery-item" role="listitem" aria-hidden="true">
-            <img src="/images/gallery/gallery-16.jpg" alt="Event highlights from an MK Pub Entertainment night" width="155" height="105" loading="lazy">
+            <img src="/images/gallery/gallery-16.jpg" alt="Event highlights from an MK Pub Entertainment night" width="310" height="210" loading="lazy">
             <div class="gallery-caption">Event Highlights</div>
           </div>
           <div class="gallery-item" role="listitem" aria-hidden="true">
-            <img src="/images/gallery/gallery-17.jpg" alt="Full house at an MK Pub Entertainment pub quiz" width="155" height="105" loading="lazy">
+            <img src="/images/gallery/gallery-17.jpg" alt="Full house at an MK Pub Entertainment pub quiz" width="310" height="210" loading="lazy">
             <div class="gallery-caption">Full House Tonight</div>
           </div>
           <div class="gallery-item" role="listitem" aria-hidden="true">
-            <img src="/images/gallery/gallery-18.jpg" alt="The quiz master hosting an MK Pub Entertainment event" width="155" height="105" loading="lazy">
+            <img src="/images/gallery/gallery-18.jpg" alt="The quiz master hosting an MK Pub Entertainment event" width="310" height="210" loading="lazy">
             <div class="gallery-caption">The Quiz Master</div>
           </div>
           <div class="gallery-item" role="listitem" aria-hidden="true">
-            <img src="/images/gallery/gallery-19.jpg" alt="Unforgettable nights with MK Pub Entertainment" width="155" height="105" loading="lazy">
+            <img src="/images/gallery/gallery-19.jpg" alt="Unforgettable nights with MK Pub Entertainment" width="310" height="210" loading="lazy">
             <div class="gallery-caption">Unforgettable Nights</div>
           </div>
 
@@ -1700,7 +1778,92 @@
       btn.disabled = true;
     });
 
+    // \u2500\u2500 GALLERY LIGHTBOX \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500
+    (function () {
+      // Collect unique (non-duplicate) gallery images in order
+      const realItems = Array.from(
+        document.querySelectorAll('.gallery-track .gallery-item:not([aria-hidden]) img')
+      );
+      if (!realItems.length) return;
+
+      // Build lightbox DOM
+      const lb      = document.createElement('div');
+      lb.className  = 'lightbox';
+      lb.setAttribute('role', 'dialog');
+      lb.setAttribute('aria-modal', 'true');
+      lb.setAttribute('aria-label', 'Photo preview');
+
+      const img     = document.createElement('img');
+      img.className = 'lightbox-img';
+      img.alt       = '';
+
+      const close   = document.createElement('button');
+      close.className = 'lightbox-close';
+      close.innerHTML = '&times;';
+      close.setAttribute('aria-label', 'Close preview');
+
+      const prev    = document.createElement('button');
+      prev.className = 'lightbox-nav lightbox-prev';
+      prev.innerHTML = '&#8249;';
+      prev.setAttribute('aria-label', 'Previous photo');
+
+      const next    = document.createElement('button');
+      next.className = 'lightbox-nav lightbox-next';
+      next.innerHTML = '&#8250;';
+      next.setAttribute('aria-label', 'Next photo');
+
+      const counter = document.createElement('div');
+      counter.className = 'lightbox-counter';
+
+      lb.append(img, close, prev, next, counter);
+      document.body.appendChild(lb);
+
+      let current = 0;
+
+      function show(n) {
+        current = (n + realItems.length) % realItems.length;
+        img.src = realItems[current].src;
+        img.alt = realItems[current].alt;
+        counter.textContent = (current + 1) + ' / ' + realItems.length;
+        lb.classList.add('open');
+        document.body.style.overflow = 'hidden';
+        close.focus();
+      }
+
+      function hide() {
+        lb.classList.remove('open');
+        document.body.style.overflow = '';
+        img.src = '';
+      }
+
+      // Open on click \u2014 works on both track instances, deduplicates via src
+      document.querySelectorAll('.gallery-track .gallery-item').forEach(item => {
+        item.addEventListener('click', function () {
+          const src = this.querySelector('img').src;
+          const idx = realItems.findIndex(i => i.src === src);
+          show(idx >= 0 ? idx : 0);
+        });
+      });
+
+      close.addEventListener('click', hide);
+      prev.addEventListener('click', () => show(current - 1));
+      next.addEventListener('click', () => show(current + 1));
+
+      // Click backdrop to close
+      lb.addEventListener('click', e => { if (e.target === lb) hide(); });
+
+      // Keyboard navigation
+      document.addEventListener('keydown', e => {
+        if (!lb.classList.contains('open')) return;
+        if (e.key === 'Escape')     hide();
+        if (e.key === 'ArrowLeft')  show(current - 1);
+        if (e.key === 'ArrowRight') show(current + 1);
+      });
+    })();
+
   </script>
+
+  <!-- LIGHTBOX overlay (populated by JS above) -->
 
 </body>
 </html>
