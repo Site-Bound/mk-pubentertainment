@@ -1532,19 +1532,21 @@
             </div>
           </div>
 
-          <!--
-            TODO: Wire up this form to a submission service before going live.
-            Options:
-              • Formspree  — add action="https://formspree.io/f/YOUR_FORM_ID" method="POST" to <form>
-              • EmailJS    — call emailjs.sendForm() in the submit handler below
-              • Cloudflare Pages Functions — POST to /api/contact (create functions/contact.js)
-              • Netlify Forms — add the netlify attribute to <form>
-          -->
           <form
             class="booking-form reveal delay-1"
             id="booking-form"
             novalidate
             aria-label="Booking enquiry form">
+
+            <!-- Sitebound Forms Worker — control fields -->
+            <input type="hidden" name="_token"     value="PASTE_YOUR_FORM_SECRET_HERE">
+            <input type="hidden" name="_recipient" value="mkpubentertainment@gmail.com">
+            <input type="hidden" name="_site"      value="MK Pub Entertainment">
+
+            <!-- Honeypot anti-spam trap (invisible to humans) -->
+            <input type="text" name="_hp" tabindex="-1" autocomplete="off"
+                   style="position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden;"
+                   aria-hidden="true">
 
             <div class="form-row-2">
               <div class="fg">
@@ -1790,19 +1792,57 @@
       draw();
     })();
 
-    // ── CONTACT FORM (client-side placeholder) ───────────────────
-    //
-    // TODO: Connect this form to a real submission service before launch.
-    // See the HTML comment on the <form> element above for options.
-    //
-    document.getElementById('booking-form').addEventListener('submit', function (e) {
-      e.preventDefault();
-      const btn = this.querySelector('.btn-submit');
-      btn.textContent = 'Enquiry Sent \u2713';
-      btn.style.background = '#1a7a3a';
-      btn.style.boxShadow  = '0 4px 20px rgba(26,122,58,0.4)';
-      btn.disabled = true;
-    });
+    // ── CONTACT FORM → Sitebound Forms Worker ────────
+    (function () {
+      // Update this URL after deploying the Worker (see sitebound-forms-worker/README.md)
+      const WORKER_URL = 'https://sitebound-forms.YOUR-SUBDOMAIN.workers.dev';
+
+      const form = document.getElementById('booking-form');
+      if (!form) return;
+
+      form.addEventListener('submit', async function (e) {
+        e.preventDefault();
+
+        const required = form.querySelectorAll('[required]');
+        let valid = true;
+        required.forEach(el => {
+          el.style.borderColor = '';
+          if (!el.value.trim()) { el.style.borderColor = '#e91e8c'; valid = false; }
+        });
+        if (!valid) return;
+
+        const btn          = form.querySelector('.btn-submit');
+        const originalText = btn.textContent;
+        btn.textContent    = 'Sending…';
+        btn.disabled       = true;
+
+        const data = {};
+        new FormData(form).forEach((v, k) => { data[k] = v; });
+
+        try {
+          const res  = await fetch(WORKER_URL, {
+            method:  'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body:    JSON.stringify(data),
+          });
+          const body = await res.json();
+
+          if (res.ok && body.success) {
+            btn.textContent      = 'Enquiry Sent ✓';
+            btn.style.background = '#1a7a3a';
+            btn.style.boxShadow  = '0 4px 20px rgba(26,122,58,0.4)';
+            form.querySelectorAll('input:not([type=hidden]), textarea, select').forEach(el => { el.value = ''; });
+          } else {
+            throw new Error(body.error || 'Submission failed');
+          }
+        } catch (err) {
+          btn.textContent = originalText;
+          btn.disabled    = false;
+          console.error('Form error:', err);
+          alert('Sorry, something went wrong. Please call or email us directly.');
+        }
+      });
+    })();
 
     // \u2500\u2500 GALLERY LIGHTBOX \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500
     (function () {
