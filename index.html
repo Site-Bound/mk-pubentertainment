@@ -565,6 +565,37 @@
       background: #0d0d0d;
     }
 
+    /* Coming-soon slot — same wrapper, styled interior */
+    .video-coming-soon {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.9rem;
+      background: linear-gradient(145deg, #1a0533 0%, #2a0d45 100%);
+    }
+    .video-coming-soon .vcs-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      border: 2px solid rgba(233,30,140,0.5);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: rgba(233,30,140,0.7);
+    }
+    .video-coming-soon .vcs-icon svg { width: 24px; height: 24px; }
+    .video-coming-soon .vcs-label {
+      font-family: var(--font-body);
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(240,230,255,0.55);
+    }
+
     .video-caption {
       text-align: center;
       font-size: 0.88rem;
@@ -1243,9 +1274,13 @@
           </div>
 
           <div class="video-item reveal delay-2">
-            <div class="video-wrapper" style="display:flex;align-items:center;justify-content:center;flex-direction:column;gap:0.6rem;color:rgba(26,26,46,0.45);font-family:var(--font-body);font-size:0.85rem;letter-spacing:0.04em;">
-              <svg width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8" fill="currentColor" stroke="none"/></svg>
-              More videos coming soon
+            <div class="video-wrapper">
+              <div class="video-coming-soon">
+                <div class="vcs-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8" fill="currentColor" stroke="none"/></svg>
+                </div>
+                <span class="vcs-label">More videos coming soon</span>
+              </div>
             </div>
             <p class="video-caption">More Videos Coming Soon</p>
           </div>
