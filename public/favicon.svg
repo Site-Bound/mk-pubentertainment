@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="40%" r="65%">
+      <stop offset="0%" stop-color="#3a0d6e"/>
+      <stop offset="100%" stop-color="#1a0533"/>
+    </radialGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#e91e8c" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#e91e8c" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="64" height="64" rx="14" fill="url(#bg)"/>
+
+  <!-- Glow -->
+  <ellipse cx="32" cy="36" rx="28" ry="22" fill="url(#glow)"/>
+
+  <!-- Gold star top-right -->
+  <polygon points="52,9 53.5,13 58,13 54.5,15.5 56,20 52,17 48,20 49.5,15.5 46,13 50.5,13"
+           fill="#d4890f" opacity="0.9"/>
+
+  <!-- MK letters -->
+  <text x="8" y="44"
+        font-family="Arial Black, Arial, sans-serif"
+        font-weight="900"
+        font-size="30"
+        letter-spacing="-1"
+        fill="#ffffff">MK</text>
+
+  <!-- Magenta underline accent -->
+  <rect x="8" y="47" width="38" height="3" rx="1.5" fill="#e91e8c"/>
+</svg>
